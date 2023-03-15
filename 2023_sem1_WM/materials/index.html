@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Letters and Numbers Game</title>
+    <script src="https://unpkg.com/jspsych@7.3.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-select@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
+
+
+    <script src="removal/0_removal_setup.js"></script>
+    <script src="removal/1_removal_instructions.js"></script>
+    <script src="removal/1_removal_abs.js"></script>
+    <script src="removal/1_removal_eco.js"></script>
+
+    <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+  
+  // General variables
+var fullscreenmode = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: true
+};
+
+var cursor_off = {
+    type: jsPsychCallFunction,
+    func: function() {
+        document.body.style.cursor= "none";
+    }
+};
+
+var cursor_on = {
+    type: jsPsychCallFunction,
+    func: function() {
+        document.body.style.cursor= "auto";
+    }
+};
+  
+  removal_timeline = [
+    removal_preload,
+    fullscreenmode,
+    removal_welcome,
+    removal_instructions,
+    cursor_off,
+    removal_practice_abs_start,
+    removal_abs_round0, cursor_on, removal_abs_recall_round0, cursor_off,
+    removal_practice_eco_start,
+    removal_eco_round0,
+    removal_practice_finish,
+    
+    removal_abs_start,
+    removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
+    removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
+    removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
+    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
+    removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
+    
+    removal_eco_start,
+    removal_round1_start, removal_eco_round1,
+    removal_round2_start, removal_eco_round2,
+    removal_round3_start, removal_eco_round3, 
+    removal_round4_start, removal_eco_round4,
+    removal_round5_start, removal_eco_round5, 
+    
+    removal_finish
+  ]
+
+var jsPsych = initJsPsych();
+var timeline = removal_timeline
+
+
+
+
+
+
+jsPsych.run(timeline);
+</script>
+</html>
