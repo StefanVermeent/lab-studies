@@ -78,6 +78,7 @@ var removal_eco_start = {
   stimulus:   "<p style = 'text-align: center;'>" +
       "You will now play the game with <strong>IMAGES</strong><br><br>" +
       "There will be a total of 5 rounds.<br><br>" +
+      "Note that you won't receive feedback for the rest of the game.<br><br>" +
       "Press any key to start when you are ready.",
   choices: 'ALL_KEYS',
   data: {variable: "test_start", task: "removal"}
@@ -88,6 +89,7 @@ var removal_abs_start = {
   stimulus:   "<p style = 'text-align: center;'>" +
       "You will now play the game with <strong>LETTERS</strong><br><br>" +
       "There will be a total of 5 rounds.<br><br>" +
+      "Note that you won't receive feedback for the rest of the game.<br><br>" +
       "Press any key to start when you are ready.",
   choices: 'ALL_KEYS',
   data: {variable: "test_start", task: "removal"}
