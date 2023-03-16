@@ -58,9 +58,8 @@ var cursor_on = {
 // First abstract, then ecological
   shifting_timeline01 = [
     shifting_shape_instructions,
-    shifting_shape_practice,
-    shifting_shape_confirmation,
     shifting_shape_practice_loop,
+    shifting_shape_confirmation,
     shifting_color_instructions,
     shifting_color_practice,
     shifting_color_confirmation,
@@ -73,13 +72,11 @@ var cursor_on = {
     abs_shifting_end,
     
     shifting_gender_instructions,
-    shifting_gender_practice,
-    shifting_gender_confirmation,
     shifting_gender_practice_loop,
+    shifting_gender_confirmation,
     shifting_emotion_instructions,
-    shifting_emotion_practice,
-    shifting_emotion_confirmation,
     shifting_emotion_practice_loop,
+    shifting_emotion_confirmation,
     shifting_eco_instructions,
     eco_shifting_01,
     eco_shifting_02,
@@ -91,9 +88,8 @@ var cursor_on = {
   // First ecological, then abstract
   shifting_timeline02 = [
     shifting_gender_instructions,
-    shifting_gender_practice,
-    shifting_gender_confirmation,
     shifting_gender_practice_loop,
+    shifting_gender_confirmation,
     shifting_emotion_instructions,
     shifting_emotion_practice,
     shifting_emotion_confirmation,
@@ -106,9 +102,8 @@ var cursor_on = {
     eco_shifting_end,
     
     shifting_shape_instructions,
-    shifting_shape_practice,
-    shifting_shape_confirmation,
     shifting_shape_practice_loop,
+    shifting_shape_confirmation,
     shifting_color_instructions,
     shifting_color_practice,
     shifting_color_confirmation,
@@ -225,7 +220,7 @@ var jsPsych = initJsPsych();
 
 counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8], 1).flat(2) 
 
-var timeline = counterbalance
+var timeline = test_order1
 
 
 
