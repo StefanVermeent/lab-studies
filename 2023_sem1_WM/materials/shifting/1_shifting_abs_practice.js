@@ -49,7 +49,7 @@ var shifting_shape_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "shape_instructions", task: "shifting_abs"}
+    data: {variable: "shape_instructions", task: "shifting_abs_instruction"}
 };
 
 // Shape practice
@@ -65,7 +65,7 @@ var shifting_shape_practice = {
       feedback_duration: 500,
       prompt: "<div style='width: 500px; height:50px;'>" + prompt_tri + prompt_circle + "</div><br><br>"+ 
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0;'>&#x21E8</h1></div>",
-      data: {variable: "shape_practice", rule: "shape", type: "repeat", task: "shifting_standard"},
+      data: {variable: "shape_practice", rule: "shape", type: "repeat", task: "shifting_abs_practice"},
       stimulus: function(){
         stim = jsPsych.timelineVariable('stimulus');
         return(stim)
@@ -90,7 +90,7 @@ var shifting_shape_confirmation = {
   stimulus: "<p>Would you like to practice the SHAPE game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
-  data: {variable: "shape_confirmation", task: "shifting_abs"}
+  data: {variable: "shape_confirmation", task: "shifting_abs_practice"}
 };
 
 var shifting_shape_practice_loop = {
@@ -126,7 +126,7 @@ var shifting_color_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "color_instructions", task: "shifting_abs"}
+    data: {variable: "color_instructions", task: "shifting_abs_instructions"}
 };
 
 // Color practice
@@ -142,7 +142,7 @@ var shifting_color_practice = {
       feedback_duration: 500,
       prompt: "<div style='width: 500px; height:50px;'>" + prompt_yellow + prompt_blue + "</div><br><br>"+ 
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0'>&#x21E8</h1></div>",
-      data: {variable: "color_practice",rule: "color", type: "repeat", task: "shifting_abs"},
+      data: {variable: "color_practice",rule: "color", type: "repeat", task: "shifting_abs_practice"},
       stimulus: function(){
         stim = jsPsych.timelineVariable('stimulus');
         return(stim)
@@ -167,7 +167,7 @@ var shifting_color_confirmation = {
   stimulus: "<p>Would you like to practice the COLOR game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
-  data: {variable: 'color_confirmation', task: "shifting_abs"}
+  data: {variable: 'color_confirmation', task: "shifting_abs_practice"}
 };
 
 var shifting_color_practice_loop = {
@@ -202,5 +202,5 @@ var shifting_abs_instructions = {
     key_forward: -1,
     key_backward: -1,
     button_label_next: "continue",
-    data: {variable: "shifting_instructions", task: "shifting_abs"}
+    data: {variable: "shifting_instructions", task: "shifting_abs_instructions"}
 };

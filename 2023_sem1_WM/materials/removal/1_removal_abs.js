@@ -169,7 +169,7 @@ var removal_abs_recall_round0 = {
   data: {
     variable: 'recall',
     task: 'removal_abs',
-    round: '1'
+    round: '0'
   }
 };
 
@@ -205,7 +205,7 @@ var removal_abs_recall_round2 = {
   data: {
     variable: 'recall',
     task: 'removal_abs',
-    round: '1'
+    round: '2'
   }
 };
 
@@ -223,7 +223,7 @@ var removal_abs_recall_round3 = {
   data: {
     variable: 'recall',
     task: 'removal_abs',
-    round: '1'
+    round: '3'
   }
 };
 
@@ -241,7 +241,7 @@ var removal_abs_recall_round4 = {
   data: {
     variable: 'recall',
     task: 'removal_abs',
-    round: '1'
+    round: '4'
   }
 };
 
@@ -259,7 +259,7 @@ var removal_abs_recall_round5 = {
   data: {
     variable: 'recall',
     task: 'removal_abs',
-    round: '1'
+    round: '5'
   }
 };
 

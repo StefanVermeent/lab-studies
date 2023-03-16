@@ -61,9 +61,8 @@ var cursor_on = {
     shifting_shape_practice_loop,
     shifting_shape_confirmation,
     shifting_color_instructions,
-    shifting_color_practice,
-    shifting_color_confirmation,
     shifting_color_practice_loop,
+    shifting_color_confirmation,
     shifting_abs_instructions,
     abs_shifting_01,
     abs_shifting_02,
@@ -216,15 +215,36 @@ var test_order8 = [
   
    
 
-var jsPsych = initJsPsych();
+var jsPsych = initJsPsych({
+  on_finish: function() {
+    tasks_start            = jsPsych.startTime();
+    data_removal_abs      = jsPsych.data.get().filter({task: 'removal_abs'});
+    data_removal_eco      = jsPsych.data.get().filter({task: 'removal_eco'});
+    
+    data_shifting_abs_prac = jsPsych.data.get().filter({task: 'shifting_abs_practice'});
+    data_shifting_eco_prac = jsPsych.data.get().filter({task: 'shifting_eco_practice'});
+    data_shifting_abs      = jsPsych.data.get().filter({task: 'shifting_abs'});
+    data_shifting_eco      = jsPsych.data.get().filter({task: 'shifting_eco'});
+    
+    tasks_browser         = jsPsych.data.getInteractionData().json();
+    window.parent.postMessage([
+      tasks_start, 
+      data_removal_abs,
+      data_removal_eco,
+      
+      data_shifting_abs_prac,
+      data_shifting_eco_prac,
+      data_shifting_abs,
+      data_shifting_eco,
+      tasks_browser
+      ], 
+      "https://survey.uu.nl/jfe/form/SV_6JydopUOxA9rFtA");
+  }
+});
 
 counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8], 1).flat(2) 
 
 var timeline = test_order1
-
-
-
-
 
 
 jsPsych.run(timeline);

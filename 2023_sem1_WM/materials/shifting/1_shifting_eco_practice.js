@@ -55,7 +55,7 @@ var shifting_gender_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "gender_instructions", task: "shifting_eco"}
+    data: {variable: "gender_instructions", task: "shifting_eco_instructions"}
 };
 
 // Gender practice
@@ -64,14 +64,14 @@ var shifting_gender_practice = {
   timeline: [
     {
       type: jsPsychCategorizeHtml,
-      choices: [37,39],
+      choices: ['ArrowLeft','ArrowRight'],
       correct_text: "<h1 style='text-align:center;'>Correct</h1>",
       incorrect_text:"<h1 style='text-align:center;'>Incorrect</h1>",
       show_stim_with_feedback: false,
       feedback_duration: 500,
       prompt: "<div style='width:500px; height: 12px;'>" + prompt_female + prompt_male + "</div><br><br><br>" +
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0;'>&#x21E8</h1></div>",
-      data: {variable: "gender_practice", rule: "type", type: "repeat", task: "shifting_eco"},
+      data: {variable: "gender_practice", rule: "type", type: "repeat", task: "shifting_eco_practice"},
       stimulus: function(){
         stim = jsPsych.timelineVariable('stimulus');
         return(stim)
@@ -84,15 +84,15 @@ var shifting_gender_practice = {
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: female_happy_gender , key_answer: 37},
-    {stimulus: male_happy_gender   , key_answer: 39},
-    {stimulus: female_angry_gender , key_answer: 37},
-    {stimulus: male_angry_gender   , key_answer: 39}
+    {stimulus: female_happy_gender , key_answer: 'ArrowLeft'},
+    {stimulus: male_happy_gender   , key_answer: 'ArrowRight'},
+    {stimulus: female_angry_gender , key_answer: 'ArrowLeft'},
+    {stimulus: male_angry_gender   , key_answer: 'ArrowRight'}
   ]
 };
 
 var shifting_gender_confirmation = {
-  type: 'jsPsychHtmlButtonResponse',
+  type: jsPsychHtmlButtonResponse,
   stimulus: "<p>Would you like to practice the GENDER game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
@@ -133,7 +133,7 @@ var shifting_emotion_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "emotion_instructions", task: "shifting_eco"}
+    data: {variable: "emotion_instructions", task: "shifting_eco_instructions"}
 };
 
 // Emotion practice
@@ -142,14 +142,14 @@ var shifting_emotion_practice = {
   timeline: [
     {
       type: jsPsychCategorizeHtml,
-      choices: [37,39],
+      choices: ['ArrowLeft','ArrowRight'],
       correct_text: "<h1 style='text-align:center;'>Correct</h1>",
       incorrect_text:"<h1 style='text-align:center;'>Incorrect</h1>",
       show_stim_with_feedback: false,
       feedback_duration: 500,
       prompt: "<div style='width:500px; height: 12px;'>" + prompt_angry + prompt_happy + "</div><br><br><br>" +
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0;'>&#x21E8</h1></div>",
-      data: {variable: "emotion_practice", rule: "size", type: "repeat", task: "shifting_eco"},
+      data: {variable: "emotion_practice", rule: "size", type: "repeat", task: "shifting_eco_practice"},
       stimulus: function(){
         stim = jsPsych.timelineVariable('stimulus');
         return(stim)
@@ -162,10 +162,10 @@ var shifting_emotion_practice = {
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: female_angry_emotion , key_answer: 37},
-    {stimulus: male_happy_emotion   , key_answer: 39},
-    {stimulus: female_happy_emotion , key_answer: 39},
-    {stimulus: male_angry_emotion   , key_answer: 37}
+    {stimulus: female_angry_emotion , key_answer: 'ArrowLeft'},
+    {stimulus: male_happy_emotion   , key_answer: 'ArrowRight'},
+    {stimulus: female_happy_emotion , key_answer: 'ArrowRight'},
+    {stimulus: male_angry_emotion   , key_answer: 'ArrowLeft'}
   ]
 };
 
@@ -174,7 +174,7 @@ var shifting_emotion_confirmation = {
   stimulus: "<p>Would you like to practice the EMOTION game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
-  data: {variable: 'emotion_confirmation', task: "shifting_eco"}
+  data: {variable: 'emotion_confirmation', task: "shifting_eco_instructions"}
 };
 
 var shifting_emotion_practice_loop = {
@@ -209,5 +209,5 @@ var shifting_eco_instructions = {
     key_forward: -1,
     key_backward: -1,
     button_label_next: "continue",
-    data: {variable: "face_shifting_instructions", task: "shifting_eco"}
+    data: {variable: "face_shifting_instructions", task: "shifting_eco_instructions"}
 };
