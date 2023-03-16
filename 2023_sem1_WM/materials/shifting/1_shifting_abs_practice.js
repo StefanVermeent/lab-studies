@@ -25,12 +25,10 @@ var bluetriangle_shape   = "<div style = 'text-align: center;'><h1>Shape</h1>" +
 
 //------------------------- Obejects to hold trial information for the practice session
 
-var shifting_standard_timeline = [];
-
 // Shape instructions
 
-var shape_instructions = {
-    type: 'instructions',
+var shifting_shape_instructions = {
+    type: jsPsychInstructions,
     pages: [
         "<p style = 'text-align: left;'>We are going to play a matching game with colors and shapes.<br><br></p>",
         "<p style = 'text-align: left;'> We will play the SHAPE game first.<br><br>" +
@@ -51,16 +49,16 @@ var shape_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "shape_instructions", task: "shifting_standard"}
+    data: {variable: "shape_instructions", task: "shifting_abs"}
 };
 
 // Shape practice
 
-var shape_practice = {
+var shifting_shape_practice = {
   timeline: [
     {
-      type: 'categorize-html',
-      choices: [37,39],
+      type: jsPsychCategorizeHtml,
+      choices: ['ArrowLeft','ArrowRight'],
       correct_text: "<h1 style='text-align:center;'>Correct</h1>",
       incorrect_text:"<h1 style='text-align:center;'>Incorrect</h1>",
       show_stim_with_feedback: false,
@@ -68,29 +66,35 @@ var shape_practice = {
       prompt: "<div style='width: 500px; height:50px;'>" + prompt_tri + prompt_circle + "</div><br><br>"+ 
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0;'>&#x21E8</h1></div>",
       data: {variable: "shape_practice", rule: "shape", type: "repeat", task: "shifting_standard"},
-      stimulus: jsPsych.timelineVariable('stimulus'),
-      key_answer: jsPsych.timelineVariable('key_answer')
-    },
+      stimulus: function(){
+        stim = jsPsych.timelineVariable('stimulus');
+        return(stim)
+      },
+      key_answer: function(){
+        key = jsPsych.timelineVariable('key_answer');
+        return(key)
+    }
+    }
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: yellowcircle_shape  , key_answer: 39},
-    {stimulus: bluecircle_shape    , key_answer: 39},
-    {stimulus: bluetriangle_shape  , key_answer: 37},
-    {stimulus: yellowtriangle_shape, key_answer: 37}
+    {stimulus: yellowcircle_shape  , key_answer: 'ArrowRight'},
+    {stimulus: bluecircle_shape    , key_answer: 'ArrowRight'},
+    {stimulus: bluetriangle_shape  , key_answer: 'ArrowLeft'},
+    {stimulus: yellowtriangle_shape, key_answer: 'ArrowLeft'}
   ]
 };
 
-var shape_confirmation = {
-  type: 'html-button-response',
+var shifting_shape_confirmation = {
+  type: jsPsychHtmlButtonResponse,
   stimulus: "<p>Would you like to practice the SHAPE game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
-  data: {variable: "shape_confirmation", task: "shifting_standard"}
+  data: {variable: "shape_confirmation", task: "shifting_abs"}
 };
 
-var shape_practice_loop = {
-  timeline: [shape_practice,shape_confirmation],
+var shifting_shape_practice_loop = {
+  timeline: [shifting_shape_practice,shifting_shape_confirmation],
   loop_function: function(data){
     if(jsPsych.data.get().last(1).values()[0].button_pressed == 1){
       return true;
@@ -102,8 +106,8 @@ var shape_practice_loop = {
 
 // Color instructions
 
-var color_instructions = {
-    type: 'instructions',
+var shifting_color_instructions = {
+    type: jsPsychInstructions,
     pages: [
         "<p style = 'text-align: left;'>We can also match by COLOR. <br><br>In the COLOR game, choose the picture that is the same COLOR as the picture in the middle of the screen.<br><br></p>",
         "If the picture is YELLOW, press the LEFT arrow key:<br><br><br>Example:"+
@@ -122,46 +126,52 @@ var color_instructions = {
     key_backward: -1,
     button_label_next: "continue",
     button_label_previous: "go back",
-    data: {variable: "color_instructions", task: "shifting_standard"}
+    data: {variable: "color_instructions", task: "shifting_abs"}
 };
 
 // Color practice
 
-var color_practice = {
+var shifting_color_practice = {
   timeline: [
     {
-      type: 'categorize-html',
-      choices: [37,39],
+      type: jsPsychCategorizeHtml,
+      choices: ['ArrowLeft','ArrowRight'],
       correct_text: "<h1 style='text-align:center;'>Correct</h1>",
       incorrect_text:"<h1 style='text-align:center;'>Incorrect</h1>",
       show_stim_with_feedback: false,
       feedback_duration: 500,
       prompt: "<div style='width: 500px; height:50px;'>" + prompt_yellow + prompt_blue + "</div><br><br>"+ 
               "<div style='width: 500px;'><h1 style='float: left; margin:0;'>&#x21E6</h1><h1 style='float: right; margin:0'>&#x21E8</h1></div>",
-      data: {variable: "color_practice",rule: "color", type: "repeat", task: "shifting_standard"},
-      stimulus: jsPsych.timelineVariable('stimulus'),
-      key_answer: jsPsych.timelineVariable('key_answer'),
+      data: {variable: "color_practice",rule: "color", type: "repeat", task: "shifting_abs"},
+      stimulus: function(){
+        stim = jsPsych.timelineVariable('stimulus');
+        return(stim)
+      },
+      key_answer: function(){
+        key = jsPsych.timelineVariable('key_answer');
+        return(key)
+    }
     }
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: bluecircle_color     , key_answer: 39},
-    {stimulus: yellowcircle_color   , key_answer: 37},
-    {stimulus: bluetriangle_color   , key_answer: 39},
-    {stimulus: yellowtriangle_color , key_answer: 37}
+    {stimulus: bluecircle_color     , key_answer: 'ArrowRight'},
+    {stimulus: yellowcircle_color   , key_answer: 'ArrowLeft'},
+    {stimulus: bluetriangle_color   , key_answer: 'ArrowRight'},
+    {stimulus: yellowtriangle_color , key_answer: 'ArrowLeft'}
   ]
 };
 
-var color_confirmation = {
-  type: 'html-button-response',
+var shifting_color_confirmation = {
+  type: jsPsychHtmlButtonResponse,
   stimulus: "<p>Would you like to practice the COLOR game again?</p>",
   choices: ['No, I am ready to continue', 'Yes, practice again'],
   prompt: "",
-  data: {variable: 'color_confirmation', task: "shifting_standard"}
+  data: {variable: 'color_confirmation', task: "shifting_abs"}
 };
 
-var color_practice_loop = {
-  timeline: [color_practice,color_confirmation],
+var shifting_color_practice_loop = {
+  timeline: [shifting_color_practice,shifting_color_confirmation],
   loop_function: function(data){
     if(jsPsych.data.get().last(1).values()[0].button_pressed == 1){
       return true;
@@ -173,8 +183,8 @@ var color_practice_loop = {
 
 // Shifting instructions
 
-var shifting_instructions = {
-    type: 'instructions',
+var shifting_abs_instructions = {
+    type: jsPsychInstructions,
     pages: ["<div style = 'text-align: left;'>Nice work!<br><br>" + 
             "Now, we are going to play both games together.<br><ul>" +
             "<li>When you see the word SHAPE, choose the picture that is the same SHAPE as the picture.</li>" +
@@ -192,5 +202,5 @@ var shifting_instructions = {
     key_forward: -1,
     key_backward: -1,
     button_label_next: "continue",
-    data: {variable: "shifting_instructions", task: "shifting_standard"}
+    data: {variable: "shifting_instructions", task: "shifting_abs"}
 };

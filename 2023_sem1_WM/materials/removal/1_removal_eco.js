@@ -61,6 +61,15 @@ var removal_preload = {
   'removal/stimuli/practice/cherrytomato02.png','removal/stimuli/practice/cookie02a.png',]
 };
 
+
+var hits = 0
+var false_alarm = 0
+
+
+
+
+
+
 // practice round
 var stimuli_round0_eco = [
 {stim: 'removal/stimuli/practice/apple03a.png', version: 'eco', round: '0', probetype: 'REMEMBER'},
@@ -163,7 +172,7 @@ var removal_eco_recall_round0 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '0'
   }
 };
@@ -192,7 +201,7 @@ var removal_eco_recall_round1 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '1'
   }
 };
@@ -221,7 +230,7 @@ var removal_eco_recall_round2 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '2'
   }
 };
@@ -250,7 +259,7 @@ var removal_eco_recall_round3 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '3'
   }
 };
@@ -279,7 +288,7 @@ var removal_eco_recall_round4 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '4'
   }
 };
@@ -308,7 +317,7 @@ var removal_eco_recall_round5 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_eco',
     round: '5'
   }
 };
@@ -321,7 +330,7 @@ var removal_round1_start = {
       "You will now begin round 1 of 5.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
-  data: {variable: "test_start", task: "removal"}
+  data: {variable: "test_start", task: "removal_eco"}
 };
 
 var removal_round2_start = {
@@ -330,7 +339,7 @@ var removal_round2_start = {
       "You will now begin round 2 of 5.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
-  data: {variable: "test_start", task: "removal"}
+  data: {variable: "test_start", task: "removal_eco"}
 };
 
 var removal_round3_start = {
@@ -339,7 +348,7 @@ var removal_round3_start = {
       "You will now begin round 3 of 5.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
-  data: {variable: "test_start", task: "removal"}
+  data: {variable: "test_start", task: "removal_eco"}
 };
 
 var removal_round4_start = {
@@ -348,7 +357,7 @@ var removal_round4_start = {
       "You will now begin round 4 of 5.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
-  data: {variable: "test_start", task: "removal"}
+  data: {variable: "test_start", task: "removal_eco"}
 };
 
 var removal_round5_start = {
@@ -357,7 +366,7 @@ var removal_round5_start = {
       "You will now begin round 5 of 5.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
-  data: {variable: "test_start", task: "removal"}
+  data: {variable: "test_start", task: "removal_eco"}
 };
 
 
@@ -393,4 +402,13 @@ var removal_eco_round5 = {
    timeline_variables: stimuli_round5_eco
 }
 
+
+// Extra loop for practice trial to include feedback
+var removal_eco_practice_feedback = {
+  timeline: [removal_collect_hits_falsealarms, removal_abs_feedback],
+   timeline_variables: [
+     {correct_items: ['<img src="removal/stimuli/practice/apple03a.png" width="70"></img>', '<img src="removal/stimuli/practice/cherrytomato02.png" width="70"></img>', '<img src="removal/stimuli/practice/broccoli01b.png" width="70"></img>', '<img src="removal/stimuli/practice/cauliflower02.png" width="70"></img>'], 
+     incorrect_items: ['<img src="removal/stimuli/practice/breadslice.png" width="70"></img>', '<img src="removal/stimuli/practice/cabbage.png" width="70"></img>', '<img src="removal/stimuli/practice/banana04b.png" width="70"></img>', '<img src="removal/stimuli/practice/cookie02a.png" width="70"></img>']}
+   ]
+}
 

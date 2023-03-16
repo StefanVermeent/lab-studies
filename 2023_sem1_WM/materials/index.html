@@ -3,7 +3,9 @@
     <title>Cognitive Tasks</title>
     <script src="https://unpkg.com/jspsych@7.3.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-categorize-html@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-multi-select@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.2"></script>
@@ -15,6 +17,13 @@
     <script src="removal/1_removal_instructions.js"></script>
     <script src="removal/1_removal_abs.js"></script>
     <script src="removal/1_removal_eco.js"></script>
+    
+    <script src="shifting/1_shifting_abs_practice.js"></script>
+    <script src="shifting/1_shifting_eco_practice.js"></script>
+    <script src="shifting/2_shifting_abs.js"></script>
+    <script src="shifting/2_shifting_eco.js"></script>
+    <script src="shifting/3_shifting_abs_end.js"></script>
+    <script src="shifting/3_shifting_eco_end.js"></script>
 
     <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
@@ -40,19 +49,87 @@ var cursor_on = {
         document.body.style.cursor= "auto";
     }
 };
-  
-  removal_timeline = [
+
+  timeline_start = [
     removal_preload,
-    fullscreenmode,
+    fullscreenmode
+  ]
+  
+// First abstract, then ecological
+  shifting_timeline01 = [
+    shifting_shape_instructions,
+    shifting_shape_practice,
+    shifting_shape_confirmation,
+    shifting_shape_practice_loop,
+    shifting_color_instructions,
+    shifting_color_practice,
+    shifting_color_confirmation,
+    shifting_color_practice_loop,
+    shifting_abs_instructions,
+    abs_shifting_01,
+    abs_shifting_02,
+    abs_shifting_03,
+    abs_shifting_04,
+    abs_shifting_end,
+    
+    shifting_gender_instructions,
+    shifting_gender_practice,
+    shifting_gender_confirmation,
+    shifting_gender_practice_loop,
+    shifting_emotion_instructions,
+    shifting_emotion_practice,
+    shifting_emotion_confirmation,
+    shifting_emotion_practice_loop,
+    shifting_eco_instructions,
+    eco_shifting_01,
+    eco_shifting_02,
+    eco_shifting_03,
+    eco_shifting_04,
+    eco_shifting_end
+  ]
+  
+  // First ecological, then abstract
+  shifting_timeline02 = [
+    shifting_gender_instructions,
+    shifting_gender_practice,
+    shifting_gender_confirmation,
+    shifting_gender_practice_loop,
+    shifting_emotion_instructions,
+    shifting_emotion_practice,
+    shifting_emotion_confirmation,
+    shifting_emotion_practice_loop,
+    shifting_eco_instructions,
+    eco_shifting_01,
+    eco_shifting_02,
+    eco_shifting_03,
+    eco_shifting_04,
+    eco_shifting_end,
+    
+    shifting_shape_instructions,
+    shifting_shape_practice,
+    shifting_shape_confirmation,
+    shifting_shape_practice_loop,
+    shifting_color_instructions,
+    shifting_color_practice,
+    shifting_color_confirmation,
+    shifting_color_practice_loop,
+    shifting_abs_instructions,
+    abs_shifting_01,
+    abs_shifting_02,
+    abs_shifting_03,
+    abs_shifting_04,
+    abs_shifting_end
+  ]
+
+
+// First abstract, then ecological
+  removal_timeline01 = [
     removal_welcome,
     removal_instructions,
     cursor_off,
-    removal_practice_abs_start,
-    removal_abs_round0, cursor_on, removal_abs_recall_round0, cursor_off,
-    removal_practice_eco_start,
-    removal_eco_round0, cursor_on, removal_eco_recall_round0, cursor_off,
+    removal_practice_abs_start, 
+    removal_abs_round0, cursor_on, removal_abs_recall_round0, removal_abs_practice_feedback, cursor_off, 
     removal_practice_finish,
-    
     removal_abs_start,
     removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
     removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
@@ -60,6 +137,27 @@ var cursor_on = {
     removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
     removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
     
+    removal_practice_eco_start,
+    removal_eco_round0, cursor_on, removal_eco_recall_round0, removal_eco_practice_feedback, cursor_off, 
+    removal_practice_finish,
+    removal_eco_start,
+    removal_round1_start, removal_eco_round1, cursor_on, removal_eco_recall_round1, cursor_off,
+    removal_round2_start, removal_eco_round2, cursor_on, removal_eco_recall_round2, cursor_off,
+    removal_round3_start, removal_eco_round3, cursor_on, removal_eco_recall_round3, cursor_off,
+    removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off,
+    removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
+    removal_finish
+  ]
+  
+  // First abstract, then ecological
+  removal_timeline02 = [
+    removal_welcome,
+    removal_instructions,
+    cursor_off,
+    
+    removal_practice_eco_start,
+    removal_eco_round0, cursor_on, removal_eco_recall_round0, removal_eco_practice_feedback, cursor_off,
+    removal_practice_finish,
     removal_eco_start,
     removal_round1_start, removal_eco_round1, cursor_on, removal_eco_recall_round1, cursor_off,
     removal_round2_start, removal_eco_round2, cursor_on, removal_eco_recall_round2, cursor_off,
@@ -67,11 +165,67 @@ var cursor_on = {
     removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off,
     removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
     
+    removal_practice_abs_start,
+    removal_abs_round0, cursor_on, removal_abs_recall_round0, cursor_off,
+    removal_practice_finish,
+    removal_abs_start,
+    removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
+    removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
+    removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
+    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
+    removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
     removal_finish
   ]
+  
+var test_order1 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 1})}},
+    timeline_start, shifting_timeline01, removal_timeline01
+  ].flat(2)  
+  
+var test_order2 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 2})}},
+    timeline_start, shifting_timeline01, removal_timeline02
+  ].flat(2)  
+  
+var test_order3 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 3})}},
+    timeline_start, shifting_timeline02, removal_timeline01
+  ].flat(2)  
+  
+var test_order4 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 4})}},
+    timeline_start, shifting_timeline02, removal_timeline02
+  ].flat(2)  
+  
+var test_order5 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 5})}},
+    timeline_start, removal_timeline01, shifting_timeline01 
+  ].flat(2)  
+  
+var test_order6 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 6})}},
+    timeline_start, removal_timeline02, shifting_timeline01 
+  ].flat(2)  
+  
+var test_order7 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 7})}},
+    timeline_start, removal_timeline01, shifting_timeline02 
+  ].flat(2)  
+  
+var test_order8 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 8})}},
+    timeline_start, removal_timeline02, shifting_timeline02
+  ].flat(2)  
+  
+  trial = [removal_abs_recall_round1, removal_abs_feedback]
+  
+   
 
 var jsPsych = initJsPsych();
-var timeline = removal_timeline
+
+counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8], 1).flat(2) 
+
+var timeline = counterbalance
 
 
 

@@ -37,6 +37,46 @@ var probe = {
   }
 };
 
+var hits = 0
+var false_alarm = 0
+
+
+var removal_collect_hits_falsealarms = {
+  type: jsPsychHtmlKeyboardResponse,
+  
+  on_start: function() {
+    
+    var response = jsPsych.data.get().last(1).values()[0].response.Recall
+    var memory_items = jsPsych.timelineVariable('correct_items')
+    var forget_items = jsPsych.timelineVariable('incorrect_items')
+    
+    console.log(response)
+    console.log(memory_items)
+    
+    hits += response.filter(x => memory_items.includes(x)).length
+    false_alarm += response.filter(x => forget_items.includes(x)).length
+    
+    console.log(hits)
+    console.log(false_alarm)
+  },
+  stimulus: '',
+  trial_duration: 0,
+  choices: 'NO_KEYS'
+}
+
+var removal_abs_feedback = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+        stim = "<div style='font-size:20px;'><b>You correctly selected <font color='blue'>" +hits+ " out of 4</font> 'REMEMBER' items.</b><br><br><br>";
+        stim += "You incorrectly selected <font color='blue'>" +false_alarm+" out of 4 </font> 'FORGET' items.<br><br></div><br><br><br>";
+        
+        return stim
+      },
+  on_finish: function(){
+    var hits = 0;
+    var false_alarm = 0;
+  }
+}
 
 var stimuli_round0_abs = [
 {stim: 'N', version: 'abs', round: '0', probetype: 'FORGET'},
@@ -128,7 +168,7 @@ var removal_abs_recall_round0 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
@@ -146,7 +186,7 @@ var removal_abs_recall_round1 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
@@ -164,7 +204,7 @@ var removal_abs_recall_round2 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
@@ -182,7 +222,7 @@ var removal_abs_recall_round3 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
@@ -200,7 +240,7 @@ var removal_abs_recall_round4 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
@@ -218,18 +258,16 @@ var removal_abs_recall_round5 = {
   ], 
   data: {
     variable: 'recall',
-    task: 'removal',
+    task: 'removal_abs',
     round: '1'
   }
 };
 
 
-
-
-
-
+// Single iteration of a stimulus and probe
 var iteration = [fixation, stimulus_abs, probe]
 
+// Full round of stimuli and probes
 var removal_abs_round0 = {
   timeline: iteration,
    timeline_variables: stimuli_round0_abs
@@ -261,3 +299,10 @@ var removal_abs_round5 = {
 }
 
 
+// Extra loop for practice trial to include feedback
+var removal_abs_practice_feedback = {
+  timeline: [removal_collect_hits_falsealarms, removal_abs_feedback],
+   timeline_variables: [
+     {correct_items: ['R', 'G', 'W', 'V'], incorrect_items: ['N', 'A', 'P', 'F']}
+   ]
+}

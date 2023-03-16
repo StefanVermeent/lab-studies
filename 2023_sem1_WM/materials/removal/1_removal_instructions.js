@@ -49,7 +49,7 @@ var removal_instructions = {
 var removal_practice_abs_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "Let's first practice the game with <strong>LETTERS</strong>.<br><br>" +
+      "You will now practice the game with <strong>LETTERS</strong>.<br><br>" +
       "When you are ready to start the practice round, press any key to start.",
   choices: 'ALL_KEYS',
   data: {variable: "practice_start", task: "removal_practice"}
@@ -58,8 +58,7 @@ var removal_practice_abs_start = {
 var removal_practice_eco_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "Great job!<br><br>" +
-      "Now let's also practice the game with <strong>IMAGES</strong>.<br><br>" +
+      "You will now practice the game with <strong>IMAGES</strong>.<br><br>" +
       "When you are ready to start the practice round, press any key to start.",
   choices: 'ALL_KEYS',
   data: {variable: "practice_start", task: "removal_practice"}
@@ -68,7 +67,7 @@ var removal_practice_eco_start = {
 var removal_practice_finish = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "You are now done practicing the game.<br><br>" +
+      "Great job! You are now done practicing the game.<br><br>" +
       "press any key to continue to the real game.",
   choices: 'ALL_KEYS',
   data: {variable: "practice_finish", task: "removal_practice"}
