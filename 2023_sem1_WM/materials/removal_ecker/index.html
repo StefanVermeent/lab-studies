@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Cognitive Tasks</title>
+    <script src="https://unpkg.com/jspsych@7.3.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-categorize-html@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-select@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@1.0.2"></script>
+
+    <script src="0_removal2_functions.js"></script>
+    <script src="0_removal2_setup.js"></script>
+    <script src="1_removal2_instructions.js"></script>
+    
+    
+
+    <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+
+
+var jsPsych = initJsPsych({
+    on_finish: function() {
+        jsPsych.data.displayData('csv')
+    }
+})
+
+// Create full timeline from encoding to recall
+var removal2_updating_full_timeline = [
+
+  removal2_welcome,
+  removal2_instructions,
+  removal2_practice_start,
+  fixation,
+  removal2_updating_loop_practice1,
+  removal2_recall,
+  removal2_feedback,
+  removal2_interblock_practice,
+  fixation,
+  removal2_updating_loop_practice2,
+  removal2_recall,
+  removal2_feedback,
+  removal2_practice_end,
+  removal2_start,
+  
+  fixation,  
+  removal2_updating_loop_01, 
+  removal2_recall, 
+  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_02, 
+ // removal2_recall, 
+ // removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_03, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_04, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_05, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_06, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_06, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_07, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_08, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_09, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+ // removal2_updating_loop_10, 
+//  removal2_recall, 
+//  removal2_interblock,
+  
+//  fixation,  
+//  removal2_updating_loop_01, 
+ // removal2_recall, 
+ // removal2_interblock,
+  ]
+
+var timeline = removal2_updating_full_timeline
+
+console.log(timeline)
+
+jsPsych.run(timeline);
+</script>
+</html>

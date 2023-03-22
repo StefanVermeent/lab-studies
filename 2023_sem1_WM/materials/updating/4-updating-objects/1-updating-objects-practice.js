@@ -34,7 +34,7 @@ var updating_ecological_instructions = {
         "You will now play a <strong>Counting</strong> game.<br><br>" + 
         "In this game, you will see a series of pictures ($5 bill, UTA bus, and a face) one at a time." +
         " Your job is to keep a MENTAL count for each object. " +
-        " You can keep count out loud or in your head, but please DO NOT use your fingers or a pencil/pen and paper to count." + 
+        " You can count out loud or in your head, but please DO NOT use your fingers or a pencil/pen and paper to count." + 
         "<br><br>" +
         "After you see each object series, you will be asked to report the number of each type of object you saw in the series.<br><br>" +
         "Click 'continue' to see an example.</p>",

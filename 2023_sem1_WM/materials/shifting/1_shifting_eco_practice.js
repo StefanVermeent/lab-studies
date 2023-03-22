@@ -1,9 +1,15 @@
 //-------------------- Stimuli for task
 
-var female_angry = "<img src='shifting/img/2-shifting-faces/03F_AN_C.png'>";
-var female_happy = "<img src='shifting/img/2-shifting-faces/03F_HA_O.png'>";
-var male_angry   = "<img src='shifting/img/2-shifting-faces/35M_AN_C.png'>";
-var male_happy   = "<img src='shifting/img/2-shifting-faces/35M_HA_O.png'>";
+var female_angry1 = "<img src='shifting/img/2-shifting-faces/140_y_f_a_a.jpg' height=300>";
+var female_happy1 = "<img src='shifting/img/2-shifting-faces/140_y_f_h_b.jpg' height=300>";
+var male_angry1   = "<img src='shifting/img/2-shifting-faces/066_y_m_a_b.jpg' height=300>";
+var male_happy1   = "<img src='shifting/img/2-shifting-faces/066_y_m_h_b.jpg' height=300>";
+
+var female_angry2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg' height=300>";
+var female_happy2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg' height=300>";
+var male_angry2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg' height=300>";
+var male_happy2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg' height=300>";
+
 var angry  = "<img src='shifting/img/2-shifting-faces/angry.png'  height=100>";
 var happy  = "<img src='shifting/img/2-shifting-faces/happy.png'  height=100 style='padding-left: 20px;'>";
 var female = "<img src='shifting/img/2-shifting-faces/female.jpg' height=100 style='padding-right: 20px;'>";
@@ -18,14 +24,23 @@ var prompt_male   = "<div style='float:right; text-align: right;' >" + male   + 
 
 //-------------------- All stimuli and rule (gender or emotion) combinations
 
-var female_happy_gender  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_happy + "</div>";
-var female_angry_gender  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_angry + "</div>";
-var female_happy_emotion = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_happy + "</div>";
-var female_angry_emotion = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_angry + "</div>";
-var male_happy_gender    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_happy   + "</div>";
-var male_angry_gender    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_angry   + "</div>";
-var male_happy_emotion   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_happy   + "</div>";
-var male_angry_emotion   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_angry   + "</div>";
+var female_happy_gender1  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_happy1 + "</div>";
+var female_angry_gender1  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_angry1 + "</div>";
+var female_happy_emotion1 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_happy1 + "</div>";
+var female_angry_emotion1 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_angry1 + "</div>";
+var male_happy_gender1    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_happy1   + "</div>";
+var male_angry_gender1    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_angry1   + "</div>";
+var male_happy_emotion1   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_happy1   + "</div>";
+var male_angry_emotion1   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_angry1   + "</div>";
+
+var female_happy_gender2  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_happy2 + "</div>";
+var female_angry_gender2  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_angry2 + "</div>";
+var female_happy_emotion2 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_happy2 + "</div>";
+var female_angry_emotion2 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_angry2 + "</div>";
+var male_happy_gender2    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_happy2   + "</div>";
+var male_angry_gender2    = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + male_angry2   + "</div>";
+var male_happy_emotion2   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_happy2   + "</div>";
+var male_angry_emotion2   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_angry2   + "</div>";
 
 //------------------------- Obejects to hold trial information for the practice session
 
@@ -40,10 +55,10 @@ var shifting_gender_instructions = {
         "<p style = 'text-align: left;'> We will play the GENDER game first.<br><br>" +
         "In the GENDER game, choose the gender that is the same as the person in the picture.<br><br></p>",
         "If the person is a WOMAN, press the LEFT arrow key.<br><br>Example:"+
-        "<div style = 'text-align: center;'>" + female_happy + "</div>" +
+        "<div style = 'text-align: center;'>" + female_happy1 + "</div>" +
         "<div>" + prompt_female + prompt_male + "</div><br><br><br>",
         "If the person is a MAN, press the RIGHT arrow key.<br><br>Example:"+
-        "<div style = 'text-align: center;'>" + male_happy + "</div>" +
+        "<div style = 'text-align: center;'>" + male_happy1 + "</div>" +
         "<div>" + prompt_female + prompt_male + "</div><br><br><br>",
         "<p style = 'text-align: left;'> Now you will practice playing the GENDER game.<br><br>" +
         "Answer as fast as you can without making mistakes. If you make a mistake, just keep going.<br><br>" +
@@ -84,10 +99,10 @@ var shifting_gender_practice = {
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: female_happy_gender , key_answer: 'ArrowLeft'},
-    {stimulus: male_happy_gender   , key_answer: 'ArrowRight'},
-    {stimulus: female_angry_gender , key_answer: 'ArrowLeft'},
-    {stimulus: male_angry_gender   , key_answer: 'ArrowRight'}
+    {stimulus: female_happy_gender1 , key_answer: 'ArrowLeft'},
+    {stimulus: male_happy_gender1   , key_answer: 'ArrowRight'},
+    {stimulus: female_angry_gender1 , key_answer: 'ArrowLeft'},
+    {stimulus: male_angry_gender1   , key_answer: 'ArrowRight'}
   ]
 };
 
@@ -118,10 +133,10 @@ var shifting_emotion_instructions = {
         "<p style = 'text-align: left;'>We can also match by the emotion the person feels." + 
         "<br><br>In the EMOTION game, choose the emotion that is the same as the one the person feels.<br><br></p>",
         "If the person is ANGRY, press the LEFT arrow key.<br><br>Example:" +
-        "<div style = 'text-align: center;'>" + female_angry + "</div>" +
+        "<div style = 'text-align: center;'>" + female_angry1 + "</div>" +
         "<div>" + prompt_angry + prompt_happy + "</div><br><br>",
         "If the person is HAPPY, press the RIGHT arrow key.<br><br>Example:" +
-        "<div style = 'text-align: center;'>" + male_happy + "</div>" +
+        "<div style = 'text-align: center;'>" + male_happy1 + "</div>" +
         "<div>" + prompt_angry + prompt_happy + "</div><br><br>",
         "<p style = 'text-align: left;'>Now you will practice playing the EMOTION game.<br><br>" +
         "Answer as fast as you can without making mistakes. If you make a mistake, just keep going.<br><br>" +
@@ -162,10 +177,10 @@ var shifting_emotion_practice = {
   ],
   randomize_order: true,
   timeline_variables: [
-    {stimulus: female_angry_emotion , key_answer: 'ArrowLeft'},
-    {stimulus: male_happy_emotion   , key_answer: 'ArrowRight'},
-    {stimulus: female_happy_emotion , key_answer: 'ArrowRight'},
-    {stimulus: male_angry_emotion   , key_answer: 'ArrowLeft'}
+    {stimulus: female_angry_emotion1 , key_answer: 'ArrowLeft'},
+    {stimulus: male_happy_emotion1   , key_answer: 'ArrowRight'},
+    {stimulus: female_happy_emotion1 , key_answer: 'ArrowRight'},
+    {stimulus: male_angry_emotion1   , key_answer: 'ArrowLeft'}
   ]
 };
 

@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/@jspsych/plugin-call-function@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@1.0.2"></script>
 
 
     <script src="removal/0_removal_setup.js"></script>
@@ -24,7 +25,12 @@
     <script src="shifting/2_shifting_eco.js"></script>
     <script src="shifting/3_shifting_abs_end.js"></script>
     <script src="shifting/3_shifting_eco_end.js"></script>
-
+    
+    <script src="removal_ecker/0_removal2_functions.js"></script>
+    <script src="removal_ecker/0_removal2_setup.js"></script>
+    <script src="removal_ecker/1_removal2_instructions.js"></script>
+    
+    
     <link href="https://unpkg.com/jspsych@7.3.2/css/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
   <body></body>
@@ -50,87 +56,15 @@ var cursor_on = {
     }
 };
 
+// START OF TIMELINE
   timeline_start = [
     removal_preload,
+    removal2_preload,
     fullscreenmode
   ]
   
-// First abstract, then ecological
-  shifting_timeline01 = [
-    shifting_shape_instructions,
-    shifting_shape_practice_loop,
-    shifting_shape_confirmation,
-    shifting_color_instructions,
-    shifting_color_practice_loop,
-    shifting_color_confirmation,
-    shifting_abs_instructions,
-    abs_shifting_01,
-    abs_shifting_02,
-    abs_shifting_03,
-    abs_shifting_04,
-    abs_shifting_end,
-    
-    shifting_gender_instructions,
-    shifting_gender_practice_loop,
-    shifting_gender_confirmation,
-    shifting_emotion_instructions,
-    shifting_emotion_practice_loop,
-    shifting_emotion_confirmation,
-    shifting_eco_instructions,
-    eco_shifting_01,
-    eco_shifting_02,
-    eco_shifting_03,
-    eco_shifting_04,
-    eco_shifting_end
-  ]
-  
-  // First ecological, then abstract
-  shifting_timeline02 = [
-    shifting_gender_instructions,
-    shifting_gender_practice_loop,
-    shifting_gender_confirmation,
-    shifting_emotion_instructions,
-    shifting_emotion_practice,
-    shifting_emotion_confirmation,
-    shifting_emotion_practice_loop,
-    shifting_eco_instructions,
-    eco_shifting_01,
-    eco_shifting_02,
-    eco_shifting_03,
-    eco_shifting_04,
-    eco_shifting_end,
-    
-    shifting_shape_instructions,
-    shifting_shape_practice_loop,
-    shifting_shape_confirmation,
-    shifting_color_instructions,
-    shifting_color_practice,
-    shifting_color_confirmation,
-    shifting_color_practice_loop,
-    shifting_abs_instructions,
-    abs_shifting_01,
-    abs_shifting_02,
-    abs_shifting_03,
-    abs_shifting_04,
-    abs_shifting_end
-  ]
-
-
-// First abstract, then ecological
-  removal_timeline01 = [
-    removal_welcome,
-    removal_instructions,
-    cursor_off,
-    removal_practice_abs_start, 
-    removal_abs_round0, cursor_on, removal_abs_recall_round0, removal_abs_practice_feedback, cursor_off, 
-    removal_practice_finish,
-    removal_abs_start,
-    removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
-    removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
-    removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
-    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
-    removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
-    
+// SHUFFLE REMOVAL ORDER
+ removal_eco = [
     removal_practice_eco_start,
     removal_eco_round0, cursor_on, removal_eco_recall_round0, removal_eco_practice_feedback, cursor_off, 
     removal_practice_finish,
@@ -140,27 +74,11 @@ var cursor_on = {
     removal_round3_start, removal_eco_round3, cursor_on, removal_eco_recall_round3, cursor_off,
     removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off,
     removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
-    removal_finish
-  ]
-  
-  // First abstract, then ecological
-  removal_timeline02 = [
-    removal_welcome,
-    removal_instructions,
-    cursor_off,
-    
-    removal_practice_eco_start,
-    removal_eco_round0, cursor_on, removal_eco_recall_round0, removal_eco_practice_feedback, cursor_off,
-    removal_practice_finish,
-    removal_eco_start,
-    removal_round1_start, removal_eco_round1, cursor_on, removal_eco_recall_round1, cursor_off,
-    removal_round2_start, removal_eco_round2, cursor_on, removal_eco_recall_round2, cursor_off,
-    removal_round3_start, removal_eco_round3, cursor_on, removal_eco_recall_round3, cursor_off,
-    removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off,
-    removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
-    
-    removal_practice_abs_start,
-    removal_abs_round0, cursor_on, removal_abs_recall_round0, cursor_off,
+ ]
+ 
+ removal_abs = [
+    removal_practice_abs_start, 
+    removal_abs_round0, cursor_on, removal_abs_recall_round0, removal_abs_practice_feedback, cursor_off, 
     removal_practice_finish,
     removal_abs_start,
     removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
@@ -168,83 +86,246 @@ var cursor_on = {
     removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
     removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
     removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
-    removal_finish
-  ]
+ ]
+ 
+ var removal_shuffle = {
+   timeline: [removal_eco, removal_abs].flat(2),
+   randomize_order: true,
+   repetitions: 1
+ }
+ 
+ removal_full = [
+   removal_welcome,
+   removal_instructions,
+   cursor_off,
+   removal_shuffle,
+   cursor_on,
+   removal_finish,
+ ]
+ 
+ // SHUFFLE SHIFTING ORDER
+ 
+ shifting_eco01 = [
+    shifting_gender_instructions,
+    shifting_gender_practice_loop,
+    shifting_gender_confirmation,
+    shifting_emotion_instructions,
+    shifting_emotion_practice_loop,
+    shifting_emotion_confirmation,
+    shifting_eco_instructions,
+    eco_shifting_01,
+    eco_shifting_interblock,
+    eco_shifting_02,
+    eco_shifting_end
+    ]
+ 
+  shifting_eco02 = [
+    shifting_gender_instructions,
+    shifting_gender_practice_loop,
+    shifting_gender_confirmation,
+    shifting_emotion_instructions,
+    shifting_emotion_practice_loop,
+    shifting_emotion_confirmation,
+    shifting_eco_instructions,
+    eco_shifting_02,
+    eco_shifting_interblock,
+    eco_shifting_01,
+    eco_shifting_end
+    ]
+
+ shifting_abs = [
+   shifting_shape_instructions,
+   shifting_shape_practice_loop,
+   shifting_shape_confirmation,
+   shifting_color_instructions,
+   shifting_color_practice_loop,
+   shifting_color_confirmation,
+   shifting_abs_instructions,
+   abs_shifting_01,
+   abs_shifting_interblock,
+   abs_shifting_02,
+   abs_shifting_end
+ ]
+ 
+ shifting_full01 = {
+   timeline: [shifting_eco01, shifting_abs].flat(2),
+   randomize_order: true,
+   repetitions: 1
+ }
+ 
+  shifting_full02 = {
+   timeline: [shifting_eco02, shifting_abs].flat(2),
+   randomize_order: true,
+   repetitions: 1
+ }
+ 
+ removal2_full = [
+   removal2_instructions,
+    removal2_practice_start,
+    fixation,
+    removal2_updating_loop_practice1,
+    removal2_recall,
+    removal2_feedback,
+    removal2_interblock_practice,
+    fixation,
+    removal2_updating_loop_practice2,
+    removal2_recall,
+    removal2_feedback,
+    removal2_practice_end,
+    removal2_start,
+  
+    fixation,  
+    removal2_updating_loop_01, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_02, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_03, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_04, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_05, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_06, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_06, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_07, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_08, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_09, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_10, 
+    removal2_recall, 
+    removal2_interblock,
+  
+    fixation,  
+    removal2_updating_loop_01, 
+    removal2_recall, 
+    removal2_interblock,
+    
+    removal2_end
+ ]
   
 var test_order1 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 1})}},
-    timeline_start, shifting_timeline01, removal_timeline01
+    timeline_start, shifting_full01, removal_full, removal2_full
   ].flat(2)  
   
 var test_order2 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 2})}},
-    timeline_start, shifting_timeline01, removal_timeline02
+    timeline_start, shifting_full02, removal_full, removal2_full
   ].flat(2)  
   
 var test_order3 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 3})}},
-    timeline_start, shifting_timeline02, removal_timeline01
+    timeline_start, removal_full, shifting_full01, removal2_full
   ].flat(2)  
   
 var test_order4 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 4})}},
-    timeline_start, shifting_timeline02, removal_timeline02
+    timeline_start, removal_full, shifting_full02, removal2_full
   ].flat(2)  
   
 var test_order5 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 5})}},
-    timeline_start, removal_timeline01, shifting_timeline01 
+    timeline_start, removal_full, removal2_full, shifting_full01
   ].flat(2)  
   
 var test_order6 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 6})}},
-    timeline_start, removal_timeline02, shifting_timeline01 
+    timeline_start, removal_full, removal2_full, shifting_full02 
   ].flat(2)  
   
 var test_order7 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 7})}},
-    timeline_start, removal_timeline01, shifting_timeline02 
+    timeline_start, removal2_full, removal_full, shifting_full01 
   ].flat(2)  
   
 var test_order8 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 8})}},
-    timeline_start, removal_timeline02, shifting_timeline02
+    timeline_start, removal2_full, removal_full, shifting_full02
   ].flat(2)  
   
-  trial = [removal_abs_recall_round1, removal_abs_feedback]
+  var test_order9 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 9})}},
+    timeline_start, removal2_full, shifting_full01 , removal_full 
+  ].flat(2)  
   
-   
+var test_order10 = [
+    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 10})}},
+    timeline_start, removal2_full, shifting_full02 , removal_full 
+  ].flat(2)  
+
 
 var jsPsych = initJsPsych({
   on_finish: function() {
     tasks_start            = jsPsych.startTime();
-    data_removal_abs      = jsPsych.data.get().filter({task: 'removal_abs'});
-    data_removal_eco      = jsPsych.data.get().filter({task: 'removal_eco'});
+    data_removal_abs       = jsPsych.data.get().filter({task: 'removal_abs'});
+    data_removal_eco       = jsPsych.data.get().filter({task: 'removal_eco'});
+    
+    data_removal2          = jsPsych.data.get().filter({task: 'removal2'});
     
     data_shifting_abs_prac = jsPsych.data.get().filter({task: 'shifting_abs_practice'});
     data_shifting_eco_prac = jsPsych.data.get().filter({task: 'shifting_eco_practice'});
-    data_shifting_abs      = jsPsych.data.get().filter({task: 'shifting_abs'});
-    data_shifting_eco      = jsPsych.data.get().filter({task: 'shifting_eco'});
+    data_shifting_abs1     = jsPsych.data.get().filter({task: 'shifting_abs1'});
+    data_shifting_abs2     = jsPsych.data.get().filter({task: 'shifting_abs2'});
+    data_shifting_eco1     = jsPsych.data.get().filter({task: 'shifting_eco1'});
+    data_shifting_eco2     = jsPsych.data.get().filter({task: 'shifting_eco2'});
     
-    tasks_browser         = jsPsych.data.getInteractionData().json();
+    tasks_browser          = jsPsych.data.getInteractionData().json();
     window.parent.postMessage([
       tasks_start, 
       data_removal_abs,
       data_removal_eco,
       
+      data_removal2,
+      
       data_shifting_abs_prac,
       data_shifting_eco_prac,
-      data_shifting_abs,
-      data_shifting_eco,
+      data_shifting_abs1,
+      data_shifting_abs2,
+      data_shifting_eco1,
+      data_shifting_eco2,
       tasks_browser
       ], 
       "https://survey.uu.nl/jfe/form/SV_6JydopUOxA9rFtA");
   }
 });
 
-counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8], 1).flat(2) 
+counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8, test_order9, test_order10], 1).flat(2) 
 
-var timeline = test_order1
+var timeline = counterbalance
 
 
 jsPsych.run(timeline);

@@ -73,8 +73,8 @@ var removal_abs_feedback = {
         return stim
       },
   on_finish: function(){
-    var hits = 0;
-    var false_alarm = 0;
+    hits = 0;
+    false_alarm = 0;
   }
 }
 
