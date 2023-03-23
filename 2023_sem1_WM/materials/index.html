@@ -105,6 +105,7 @@ var cursor_on = {
  // SHUFFLE SHIFTING ORDER
  
  shifting_eco01 = [
+   preload_shifting1,
     shifting_gender_instructions,
     shifting_gender_practice_loop,
     shifting_gender_confirmation,
@@ -113,12 +114,14 @@ var cursor_on = {
     shifting_emotion_confirmation,
     shifting_eco_instructions,
     eco_shifting_01,
+    preload_shifting2,
     eco_shifting_interblock,
     eco_shifting_02,
     eco_shifting_end
     ]
  
   shifting_eco02 = [
+    preload_shifting1,
     shifting_gender_instructions,
     shifting_gender_practice_loop,
     shifting_gender_confirmation,
@@ -126,6 +129,7 @@ var cursor_on = {
     shifting_emotion_practice_loop,
     shifting_emotion_confirmation,
     shifting_eco_instructions,
+    preload_shifting1,
     eco_shifting_02,
     eco_shifting_interblock,
     eco_shifting_01,
@@ -325,7 +329,7 @@ var jsPsych = initJsPsych({
 
 counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8, test_order9, test_order10], 1).flat(2) 
 
-var timeline = counterbalance
+var timeline = test_order1
 
 
 jsPsych.run(timeline);

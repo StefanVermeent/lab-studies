@@ -51,22 +51,12 @@ var removal_recall = {
   ], 
 };
 
-var removal_preload = {
-  type: jsPsychPreload,
-  images: ['removal/stimuli/BOSS/manshoe.png', 'removal/stimuli/BOSS/grater01a.png', 'removal/stimuli/BOSS/makeupbrush04.png', 'removal/stimuli/BOSS/spoon01.png', 'removal/stimuli/BOSS/tuque03a.png', 'removal/stimuli/BOSS/pencilsharpener02a.png', 'removal/stimuli/BOSS/threeholepunch03.png', 'removal/stimuli/BOSS/spatula03.png', 'removal/stimuli/BOSS/overalls.png', 'removal/stimuli/BOSS/qtip.png', 'removal/stimuli/BOSS/highheelshoe01.png', 'removal/stimuli/BOSS/remotecontrol04.png', 'removal/stimuli/BOSS/alarmclock01.png', 'removal/stimuli/BOSS/moccasin.png', 'removal/stimuli/BOSS/soapdispenser01.png', 'removal/stimuli/BOSS/measuringcup01.png', 'removal/stimuli/BOSS/toaster01.png', 'removal/stimuli/BOSS/plate01b.png', 'removal/stimuli/BOSS/shirt01.png', 'removal/stimuli/BOSS/sock01a.png', 'removal/stimuli/BOSS/shorts01.png', 'removal/stimuli/BOSS/mechanicalpencil02.png', 'removal/stimuli/BOSS/foodprocessor.png', 'removal/stimuli/BOSS/laptop01a.png', 'removal/stimuli/BOSS/computermouse06.png', 'removal/stimuli/BOSS/cd.png', 'removal/stimuli/BOSS/pencil01.png', 'removal/stimuli/BOSS/slipper01b.png', 'removal/stimuli/BOSS/cap01a.png', 'removal/stimuli/BOSS/tupperware03a.png', 'removal/stimuli/BOSS/pitcher02b.png', 'removal/stimuli/BOSS/ruler04.png', 'removal/stimuli/BOSS/highlighter02b.png', 'removal/stimuli/BOSS/garlicpress02a.png', 'removal/stimuli/BOSS/coffeepot03a.png', 'removal/stimuli/BOSS/fryingpan02a.png', 'removal/stimuli/BOSS/strainer02.png', 'removal/stimuli/BOSS/bleachbottle.png', 'removal/stimuli/BOSS/ramekin01.png', 'removal/stimuli/BOSS/bowl01.png', 'removal/stimuli/BOSS/avcable.png', 'removal/stimuli/BOSS/measuringspoon.png', 'removal/stimuli/BOSS/corkscrew03a.png', 'removal/stimuli/BOSS/eraser.png', 'removal/stimuli/BOSS/styrofoamcup.png', 'removal/stimuli/BOSS/mug01.png', 'removal/stimuli/BOSS/cottonpad.png', 'removal/stimuli/BOSS/envelope03a.png', 'removal/stimuli/BOSS/sandal.png', 'removal/stimuli/BOSS/spatula04.png',
-  'removal/stimuli/instructions1.png',
-  
-  'removal/stimuli/practice/apple03a.png','removal/stimuli/practice/banana04b.png','removal/stimuli/practice/breadslice.png',
-  'removal/stimuli/practice/broccoli01b.png','removal/stimuli/practice/cabbage.png','removal/stimuli/practice/cauliflower02.png',
-  'removal/stimuli/practice/cherrytomato02.png','removal/stimuli/practice/cookie02a.png',]
-};
-
 
 var hits = 0
 var false_alarm = 0
 
 var removal_practice_preload = {
-  type: jsPsychPreload,jsPsychPreload,
+  type: jsPsychPreload,
   images: [
     'removal/stimuli/practice/apple03a.png','removal/stimuli/practice/banana04b.png','removal/stimuli/practice/breadslice.png',
   'removal/stimuli/practice/broccoli01b.png','removal/stimuli/practice/cabbage.png','removal/stimuli/practice/cauliflower02.png',

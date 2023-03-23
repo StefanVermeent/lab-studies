@@ -1,14 +1,35 @@
 //-------------------- Stimuli for task
 
-var female_angry1 = "<img src='shifting/img/2-shifting-faces/140_y_f_a_a.jpg' height=300>";
-var female_happy1 = "<img src='shifting/img/2-shifting-faces/140_y_f_h_b.jpg' height=300>";
-var male_angry1   = "<img src='shifting/img/2-shifting-faces/066_y_m_a_b.jpg' height=300>";
-var male_happy1   = "<img src='shifting/img/2-shifting-faces/066_y_m_h_b.jpg' height=300>";
+var preload_shifting1 = {
+  type: jsPsychPreload,
+  images: [
+     'shifting/img/2-shifting-faces/140_y_f_a_a.jpg',
+     'shifting/img/2-shifting-faces/140_y_f_h_b.jpg',
+     'shifting/img/2-shifting-faces/066_y_m_a_b.jpg',
+     'shifting/img/2-shifting-faces/066_y_m_h_b.jpg' 
+  ]
+}  
 
-var female_angry2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg' width=300>";
-var female_happy2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg' width=300>";
-var male_angry2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg' width=300>";
-var male_happy2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg' width=300>";
+var preload_shifting2 = {
+  type: jsPsychPreload,
+  images: [
+     'shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg',
+     'shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg',
+     'shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg',
+     'shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg'
+  ]
+}  
+
+
+var female_angry1 = "<img src='shifting/img/2-shifting-faces/140_y_f_a_a.jpg'>";
+var female_happy1 = "<img src='shifting/img/2-shifting-faces/140_y_f_h_b.jpg'>";
+var male_angry1   = "<img src='shifting/img/2-shifting-faces/066_y_m_a_b.jpg'>";
+var male_happy1   = "<img src='shifting/img/2-shifting-faces/066_y_m_h_b.jpg'>";
+
+var female_angry2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg'>";
+var female_happy2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg'>";
+var male_angry2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg'>";
+var male_happy2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg'>";
 
 var angry  = "<img src='shifting/img/2-shifting-faces/angry.png'  height=100>";
 var happy  = "<img src='shifting/img/2-shifting-faces/happy.png'  height=100 style='padding-left: 20px;'>";
