@@ -5,10 +5,10 @@ var female_happy1 = "<img src='shifting/img/2-shifting-faces/140_y_f_h_b.jpg' he
 var male_angry1   = "<img src='shifting/img/2-shifting-faces/066_y_m_a_b.jpg' height=300>";
 var male_happy1   = "<img src='shifting/img/2-shifting-faces/066_y_m_h_b.jpg' height=300>";
 
-var female_angry2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg' height=300>";
-var female_happy2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg' height=300>";
-var male_angry2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg' height=300>";
-var male_happy2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg' height=300>";
+var female_angry2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-029-A.jpg' width=300>";
+var female_happy2 = "<img src='shifting/img/2-shifting-faces/CFD-WF-007-003-HO.jpg' width=300>";
+var male_angry2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-010-A.jpg' width=300>";
+var male_happy2   = "<img src='shifting/img/2-shifting-faces/CFD-WM-024-003-HO.jpg' width=300>";
 
 var angry  = "<img src='shifting/img/2-shifting-faces/angry.png'  height=100>";
 var happy  = "<img src='shifting/img/2-shifting-faces/happy.png'  height=100 style='padding-left: 20px;'>";
@@ -33,7 +33,7 @@ var male_angry_gender1    = "<div style = 'text-align: center;'><h1>Gender <br><
 var male_happy_emotion1   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_happy1   + "</div>";
 var male_angry_emotion1   = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + male_angry1   + "</div>";
 
-var female_happy_gender2  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_happy2 + "</div>";
+var female_happy_gender2  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_happy2 + "</div><br><br>";
 var female_angry_gender2  = "<div style = 'text-align: center;'><h1>Gender <br></h1>" + female_angry2 + "</div>";
 var female_happy_emotion2 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_happy2 + "</div>";
 var female_angry_emotion2 = "<div style = 'text-align: center;'><h1>Emotion<br></h1>" + female_angry2 + "</div>";

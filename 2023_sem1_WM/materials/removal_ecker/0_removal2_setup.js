@@ -100,7 +100,7 @@ var removal2_newletter = {
     stim = update_display(letter, position)
     return stim
   },
-  choices: " ",
+  choices: "ALL_KEYS",
   trial_duration: 5000,
   data: {
     variable: 'newletter',
