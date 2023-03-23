@@ -173,6 +173,7 @@ var removal_abs_recall_round0 = {
   }
 };
 
+
 var removal_abs_recall_round1 = {
   type: jsPsychSurveyMultiSelect,
   questions: [
@@ -209,6 +210,7 @@ var removal_abs_recall_round2 = {
   }
 };
 
+
 var removal_abs_recall_round3 = {
   type: jsPsychSurveyMultiSelect,
   questions: [
@@ -226,6 +228,7 @@ var removal_abs_recall_round3 = {
     round: '3'
   }
 };
+
 
 var removal_abs_recall_round4 = {
   type: jsPsychSurveyMultiSelect,
@@ -245,12 +248,14 @@ var removal_abs_recall_round4 = {
   }
 };
 
+
+
 var removal_abs_recall_round5 = {
   type: jsPsychSurveyMultiSelect,
   questions: [
     {
       prompt: "Which letters did you have to remember?", 
-      options: ['B', 'C', 'G', 'L', 'M', 'R', 'S', 'U', 'W', 'Y'],
+      options: ['A', 'C', 'E', 'G', 'K', 'N', 'O', 'T', 'U', 'W'],
       horizontal: true,
       required: false,
       name: 'Recall'
@@ -263,6 +268,16 @@ var removal_abs_recall_round5 = {
   }
 };
 
+{stim: , version: 'abs', round: '5', probetype: 'REMEMBER'},
+
+{stim: , version: 'abs', round: '5', probetype: 'REMEMBER'},
+{stim: , version: 'abs', round: '5', probetype: 'REMEMBER'},
+{stim: , version: 'abs', round: '5', probetype: 'FORGET'},
+{stim: , version: 'abs', round: '5', probetype: 'REMEMBER'},
+{stim: , version: 'abs', round: '5', probetype: 'REMEMBER'},
+{stim: , version: 'abs', round: '5', probetype: 'FORGET'},
+{stim: , version: 'abs', round: '5', probetype: 'FORGET'},
+{stim: , version: 'abs', round: '5', probetype: 'FORGET'},
 
 // Single iteration of a stimulus and probe
 var iteration = [fixation, stimulus_abs, probe]
