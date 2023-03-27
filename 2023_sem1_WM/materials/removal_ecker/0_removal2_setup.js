@@ -300,7 +300,7 @@ var removal2_updating_loop_09 = {
     }
   },
   timeline_variables: [
-   {encoding: ['L', 'A', 'G'], interval_empty: ['500'], interval_cue: ['200'], position: ['0'], letter: ['S'], length: 0, correct: ['S', 'a', 'g']},
+   {encoding: ['L', 'A', 'G'], interval_empty: ['500'], interval_cue: ['200'], position: ['0'], letter: ['S'], length: 0, correct: ['S', 'A', 'G']},
 ]
 }
 
@@ -317,7 +317,7 @@ var removal2_updating_loop_10 = {
     }
   },
   timeline_variables: [
-   {encoding: ['Y', 'I', 'B'], interval_empty: ['500', '1800'], interval_cue: ['200', '200'], position: ['1', '1'], letter: ['H', 'G'], length: 1, correct: ['y', 'G', 'b']},
+   {encoding: ['Y', 'I', 'B'], interval_empty: ['500', '1800'], interval_cue: ['200', '200'], position: ['1', '1'], letter: ['H', 'G'], length: 1, correct: ['y', 'G', 'B']},
 ]
 }
 

@@ -2,7 +2,7 @@ library(tidyverse)
 library(glue)
 
 set.seed(1245)
-n_trials = 12
+n_trials = 10
 
 trial_settings = 1:n_trials |> 
   map_df(function(x){

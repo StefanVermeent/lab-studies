@@ -230,14 +230,11 @@ var removal_eco_recall_round0 = {
   questions: [
     {
       prompt: "Which images did you have to remember?", 
-      options: ['<img src="removal/stimuli/practice/apple03a.png" width="70"></img>',
-'<img src="removal/stimuli/practice/breadslice.png" width="70"></img>',
-'<img src="removal/stimuli/practice/cabbage.png" width="70"></img>',
-'<img src="removal/stimuli/practice/cherrytomato02.png" width="70"></img>',
-'<img src="removal/stimuli/practice/banana04b.png" width="70"></img>',
-'<img src="removal/stimuli/practice/broccoli01b.png" width="70"></img>',
-'<img src="removal/stimuli/practice/cauliflower02.png" width="70"></img>',
-'<img src="removal/stimuli/practice/cookie02a.png" width="70"></img>',
+      options: [
+        '<img src="removal/stimuli/practice/apple03a.png" width="70"></img>', '<img src="removal/stimuli/practice/banana04b.png" width="70"></img>',   
+'<img src="removal/stimuli/practice/breadslice.png" width="70"></img>', '<img src="removal/stimuli/practice/broccoli01b.png" width="70"></img>',   
+'<img src="removal/stimuli/practice/cabbage.png" width="70"></img>', '<img src="removal/stimuli/practice/cauliflower02.png" width="70"></img>',
+'<img src="removal/stimuli/practice/cherrytomato02.png" width="70"></img>', '<img src="removal/stimuli/practice/cookie02a.png" width="70"></img>'
 ],
       horizontal: false,
       required: false,
@@ -257,16 +254,11 @@ var removal_eco_recall_round1 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/threeholepunch03.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/pencilsharpener02a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/spatula03.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/qtip.png" width="70"></img>', 
-'<img src="removal/stimuli/BOSS/manshoe.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/tuque03a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/makeupbrush04.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/spoon01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/grater01a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/overalls.png" width="70"></img>'
+        '<img src="removal/stimuli/BOSS/grater01a.png" width="70"></img>',          '<img src="removal/stimuli/BOSS/makeupbrush04.png" width="70"></img>',     
+'<img src="removal/stimuli/BOSS/manshoe.png" width="70"></img>',            '<img src="removal/stimuli/BOSS/overalls.png" width="70"></img>',       
+'<img src="removal/stimuli/BOSS/pencilsharpener02a.png" width="70"></img>', '<img src="removal/stimuli/BOSS/qtip.png" width="70"></img>',             
+'<img src="removal/stimuli/BOSS/spatula03.png" width="70"></img>',          '<img src="removal/stimuli/BOSS/spoon01.png" width="70"></img>',           
+'<img src="removal/stimuli/BOSS/threeholepunch03.png" width="70"></img>',   '<img src="removal/stimuli/BOSS/tuque03a.png" width="70"></img>'
 ],
       horizontal: false,
       required: false,
@@ -286,16 +278,11 @@ var removal_eco_recall_round2 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/sock01a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/plate01b.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/measuringcup01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/toaster01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/highheelshoe01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/shirt01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/moccasin.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/remotecontrol04.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/alarmclock01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/soapdispenser01.png" width="70"></img>',
+        '<img src="removal/stimuli/BOSS/alarmclock01.png" width="70"></img>',    '<img src="removal/stimuli/BOSS/highheelshoe01.png" width="70"></img>',
+ '<img src="removal/stimuli/BOSS/measuringcup01.png" width="70"></img>',  '<img src="removal/stimuli/BOSS/moccasin.png" width="70"></img>' ,     
+'<img src="removal/stimuli/BOSS/plate01b.png" width="70"></img>',        '<img src="removal/stimuli/BOSS/remotecontrol04.png" width="70"></img>',
+'<img src="removal/stimuli/BOSS/shirt01.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/soapdispenser01.png" width="70"></img>',
+'<img src="removal/stimuli/BOSS/sock01a.png" width="70"></img>',        '<img src="removal/stimuli/BOSS/toaster01.png" width="70"></img>'
 ],
       horizontal: false,
       required: false,
@@ -315,16 +302,11 @@ var removal_eco_recall_round3 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/pencil01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/computermouse06.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/mechanicalpencil02.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/shorts01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/slipper01b.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/cd.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/tupperware03a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/laptop01a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/foodprocessor.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/cap01a.png" width="70"></img>',
+        '<img src="removal/stimuli/BOSS/cap01a.png" width="70"></img>',             '<img src="removal/stimuli/BOSS/cd.png" width="70"></img>',               
+ '<img src="removal/stimuli/BOSS/computermouse06.png" width="70"></img>',   '<img src="removal/stimuli/BOSS/foodprocessor.png" width="70"></img>',    
+'<img src="removal/stimuli/BOSS/laptop01a.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/mechanicalpencil02.png" width="70"></img>',
+'<img src="removal/stimuli/BOSS/pencil01.png" width="70"></img>' ,         '<img src="removal/stimuli/BOSS/shorts01.png" width="70"></img>',      
+ '<img src="removal/stimuli/BOSS/slipper01b.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/tupperware03a.png" width="70"></img>"  
 ],
       horizontal: false,
       required: false,
@@ -344,16 +326,10 @@ var removal_eco_recall_round4 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/ruler04.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/highlighter02b.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/ramekin01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/coffeepot03a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/fryingpan02a.png" width="70"></img>', 
-'<img src="removal/stimuli/BOSS/garlicpress02a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/pitcher02b.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/bleachbottle.png" width="70"></img>', 
-'<img src="removal/stimuli/BOSS/strainer02.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/bowl01.png" width="70"></img>',
+        '<img src="removal/stimuli/BOSS/bleachbottle.png" width="70"></img>',   '<img src="removal/stimuli/BOSS/bowl01.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/coffeepot03a.png" width="70"></img>',  
+ '<img src="removal/stimuli/BOSS/fryingpan02a.png" width="70"></img>',   '<img src="removal/stimuli/BOSS/garlicpress02a.png" width="70"></img>', '<img src="removal/stimuli/BOSS/highlighter02b.png" width="70"></img>',
+ '<img src="removal/stimuli/BOSS/pitcher02b.png" width="70"></img>',     '<img src="removal/stimuli/BOSS/ramekin01.png" width="70"></img>',      '<img src="removal/stimuli/BOSS/ruler04.png" width="70"></img>',       
+'<img src="removal/stimuli/BOSS/strainer02.png" width="70"></img>' 
 ],
       horizontal: false,
       required: false,
@@ -373,16 +349,10 @@ var removal_eco_recall_round5 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/corkscrew03a.png" width="70"></img>', 
-'<img src="removal/stimuli/BOSS/measuringspoon.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/envelope03a.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/styrofoamcup.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/cottonpad.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/sandal.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/mug01.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/eraser.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/spatula04.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/avcable.png" width="70"></img>',
+        '<img src="removal/stimuli/BOSS/avcable.png" width="70"></img>',        '<img src="removal/stimuli/BOSS/corkscrew03a.png" width="70"></img>' ,  '<img src="removal/stimuli/BOSS/cottonpad.png" width="70"></img>',     
+'<img src="removal/stimuli/BOSS/envelope03a.png" width="70"></img>',    '<img src="removal/stimuli/BOSS/eraser.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/measuringspoon.png" width="70"></img>',
+ '<img src="removal/stimuli/BOSS/mug01.png" width="70"></img>',          '<img src="removal/stimuli/BOSS/sandal.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/spatula04.png" width="70"></img>',     
+'<img src="removal/stimuli/BOSS/styrofoamcup.png" width="70"></img>' 
 ],
       horizontal: false,
       required: false,
