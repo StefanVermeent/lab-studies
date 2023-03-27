@@ -72,6 +72,7 @@ var removal_abs_feedback = {
         
         return stim
       },
+  trial_duration: 1500,
   on_finish: function(){
     hits = 0;
     false_alarm = 0;

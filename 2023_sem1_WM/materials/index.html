@@ -71,8 +71,8 @@ var cursor_on = {
     removal_round1_preload, removal_round1_start, removal_eco_round1, cursor_on, removal_eco_recall_round1, cursor_off,
     removal_round2_preload, removal_round2_start, removal_eco_round2, cursor_on, removal_eco_recall_round2, cursor_off,
     removal_round3_preload, removal_round3_start, removal_eco_round3, cursor_on, removal_eco_recall_round3, cursor_off,
-    removal_round4_preload, removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off,
-    removal_round5_preload, removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
+    removal_round4_preload, removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off
+    //removal_round5_preload, removal_round5_start, removal_eco_round5, cursor_on, removal_eco_recall_round5, cursor_off,
  ]
  
  removal_abs = [
@@ -83,8 +83,8 @@ var cursor_on = {
     removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
     removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
     removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
-    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off,
-    removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
+    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off
+    //removal_round5_start, removal_abs_round5, cursor_on, removal_abs_recall_round5, cursor_off,
  ]
  
  var removal_shuffle = {
@@ -294,7 +294,7 @@ var test_order10 = [
 
 var jsPsych = initJsPsych({
   on_finish: function() {
-    tasks_start            = jsPsych.startTime();
+    tasks_start            = jsPsych.getStartTime();
     data_removal_abs       = jsPsych.data.get().filter({task: 'removal_abs'});
     data_removal_eco       = jsPsych.data.get().filter({task: 'removal_eco'});
     
@@ -329,7 +329,7 @@ var jsPsych = initJsPsych({
 
 counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8, test_order9, test_order10], 1).flat(2) 
 
-var timeline = test_order1
+var timeline = counterbalance
 
 
 jsPsych.run(timeline);
