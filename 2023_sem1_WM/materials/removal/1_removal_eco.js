@@ -302,11 +302,11 @@ var removal_eco_recall_round3 = {
     {
       prompt: "Which images did you have to remember?", 
       options: [
-        '<img src="removal/stimuli/BOSS/cap01a.png" width="70"></img>',             '<img src="removal/stimuli/BOSS/cd.png" width="70"></img>',               
- '<img src="removal/stimuli/BOSS/computermouse06.png" width="70"></img>',   '<img src="removal/stimuli/BOSS/foodprocessor.png" width="70"></img>',    
-'<img src="removal/stimuli/BOSS/laptop01a.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/mechanicalpencil02.png" width="70"></img>',
-'<img src="removal/stimuli/BOSS/pencil01.png" width="70"></img>' ,         '<img src="removal/stimuli/BOSS/shorts01.png" width="70"></img>',      
- '<img src="removal/stimuli/BOSS/slipper01b.png" width="70"></img>',         '<img src="removal/stimuli/BOSS/tupperware03a.png" width="70"></img>"  
+        '<img src="removal/stimuli/BOSS/cap01a.png" width="70"></img>',          '<img src="removal/stimuli/BOSS/cd.png" width="70"></img>',               
+        '<img src="removal/stimuli/BOSS/computermouse06.png" width="70"></img>', '<img src="removal/stimuli/BOSS/foodprocessor.png" width="70"></img>',    
+        '<img src="removal/stimuli/BOSS/laptop01a.png" width="70"></img>',       '<img src="removal/stimuli/BOSS/mechanicalpencil02.png" width="70"></img>',
+        '<img src="removal/stimuli/BOSS/pencil01.png" width="70"></img>' ,       '<img src="removal/stimuli/BOSS/shorts01.png" width="70"></img>',      
+        '<img src="removal/stimuli/BOSS/slipper01b.png" width="70"></img>',      '<img src="removal/stimuli/BOSS/tupperware03a.png" width="70"></img>'  
 ],
       horizontal: false,
       required: false,
