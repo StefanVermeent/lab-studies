@@ -329,7 +329,13 @@ var jsPsych = initJsPsych({
 
 counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8, test_order9, test_order10], 1).flat(2) 
 
-var timeline = counterbalance
+shifting_trial = {
+   timeline: shifting_eco01,
+   randomize_order: true,
+   repetitions: 1
+ }
+
+var timeline = shifting_eco01//counterbalance
 
 
 jsPsych.run(timeline);
