@@ -401,7 +401,7 @@ var removal_eco_recall_round5 = {
 var removal_round1_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "You will now begin round 1 of 5.<br><br>" +
+      "You will now begin round 1 of 4.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
   data: {variable: "test_start", task: "removal_eco"}
@@ -410,7 +410,7 @@ var removal_round1_start = {
 var removal_round2_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "You will now begin round 2 of 5.<br><br>" +
+      "You will now begin round 2 of 4.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
   data: {variable: "test_start", task: "removal_eco"}
@@ -419,7 +419,7 @@ var removal_round2_start = {
 var removal_round3_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "You will now begin round 3 of 5.<br><br>" +
+      "You will now begin round 3 of 4.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
   data: {variable: "test_start", task: "removal_eco"}
@@ -428,7 +428,7 @@ var removal_round3_start = {
 var removal_round4_start = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:    "<p style = 'text-align: center;'>" +
-      "You will now begin round 4 of 5.<br><br>" +
+      "You will now begin round 4 of 4.<br><br>" +
       "press any key to start.",
   choices: "ALL_KEYS",
   data: {variable: "test_start", task: "removal_eco"}
