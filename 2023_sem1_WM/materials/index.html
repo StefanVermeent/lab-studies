@@ -113,7 +113,7 @@ var cursor_on = {
   //  shifting_emotion_practice_loop,
   //  shifting_emotion_confirmation,
   //  shifting_eco_instructions,
-    eco_shifting_01,
+   // eco_shifting_01,
     preload_shifting2,
     eco_shifting_interblock,
     eco_shifting_02,
@@ -309,6 +309,9 @@ var jsPsych = initJsPsych({
     data_shifting_eco2     = jsPsych.data.get().filter({task: 'shifting_eco2'});
     
     tasks_browser          = jsPsych.data.getInteractionData().json();
+    console.log(data_shifting_eco2)
+    console.log(tasks_start)
+    console.log(tasks_browser)
     window.parent.postMessage([
       tasks_start, 
       data_removal_abs,
