@@ -106,13 +106,13 @@ var cursor_on = {
  
  shifting_eco01 = [
    preload_shifting1,
-    shifting_gender_instructions,
-    shifting_gender_practice_loop,
-    shifting_gender_confirmation,
-    shifting_emotion_instructions,
-    shifting_emotion_practice_loop,
-    shifting_emotion_confirmation,
-    shifting_eco_instructions,
+   // shifting_gender_instructions,
+   // shifting_gender_practice_loop,
+   // shifting_gender_confirmation,
+   // shifting_emotion_instructions,
+  //  shifting_emotion_practice_loop,
+  //  shifting_emotion_confirmation,
+  //  shifting_eco_instructions,
     eco_shifting_01,
     preload_shifting2,
     eco_shifting_interblock,
@@ -294,6 +294,7 @@ var test_order10 = [
 
 var jsPsych = initJsPsych({
   on_finish: function() {
+    console.log('this gets printed')
     tasks_start            = jsPsych.getStartTime();
     data_removal_abs       = jsPsych.data.get().filter({task: 'removal_abs'});
     data_removal_eco       = jsPsych.data.get().filter({task: 'removal_eco'});
