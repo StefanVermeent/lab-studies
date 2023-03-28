@@ -132,7 +132,7 @@ var removal2_recall = {
   dataAsArray: true,
   data: {
     variable: 'recall',
-    task: function(){return jsPsych.timelineVariable('task')},
+    task: function(){return jsPsych.data.get().last(1).values()[0].task},
     stimulus: '',
     correct: function(){return jsPsych.data.get().last(1).values()[0].correct}
   }
