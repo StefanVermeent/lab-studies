@@ -104,7 +104,7 @@ var removal2_newletter = {
   trial_duration: 5000,
   data: {
     variable: 'newletter',
-    task: 'removal2',
+    task: function(){return jsPsych.timelineVariable('task'),
     stimulus: '',
     position: function(){return jsPsych.timelineVariable('position')[trial_count]},
     letter: function(){return jsPsych.timelineVariable('letter')[trial_count]},
@@ -132,7 +132,7 @@ var removal2_recall = {
   dataAsArray: true,
   data: {
     variable: 'recall',
-    task: 'removal2',
+    task: function(){return jsPsych.timelineVariable('task'),
     stimulus: '',
     correct: function(){return jsPsych.data.get().last(1).values()[0].correct}
   }
