@@ -102,7 +102,7 @@ var removal2_interblock_practice = {
   choices: "ALL_KEYS",
   data: {
     variable: 'interblock',
-    task: 'removal2'
+    task: 'removal2_notlog'
   }
 };
 
@@ -149,7 +149,7 @@ var removal2_practice_end = {
   choices: 'ALL_KEYS',
   data: {
     variable: 'practice',
-    task: 'removal2'
+    task: 'removal2_notlog'
   }
 };
 
@@ -161,7 +161,7 @@ var removal2_start = {
       "Note that you won't receive feedback for the rest of the game.<br><br>" +
       "Press any key to start when you are ready.",
   choices: 'ALL_KEYS',
-  data: {variable: "test_start", task: "removal2"}
+  data: {variable: "test_start", task: "removal2_notlog"}
 };
 
 var removal2_end = {
@@ -170,5 +170,5 @@ var removal2_end = {
   "You are now finished playing this game.<br><br>" +
   "Click 'finish' to continue.<br><br>",
   choices: ['Finish'],
-  data: {variable: "finish", task: "removal2"},
+  data: {variable: "finish", task: "removal2_notlog"},
 };

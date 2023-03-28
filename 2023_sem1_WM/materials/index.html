@@ -162,7 +162,7 @@ var cursor_on = {
    repetitions: 1
  }
  
- removal2_full = [
+ removal2_full01 = [
     removal2_preload,
     removal2_instructions,
     removal2_practice_start,
@@ -191,9 +191,11 @@ var cursor_on = {
     fixation,  
     removal2_updating_loop_03, 
     removal2_recall, 
-    removal2_interblock,
-  
-    fixation,  
+    removal2_interblock
+    ]
+    
+removal2_full02 = [
+  fixation,  
     removal2_updating_loop_04, 
     removal2_recall, 
     removal2_interblock,
@@ -211,8 +213,10 @@ var cursor_on = {
     fixation,  
     removal2_updating_loop_07, 
     removal2_recall, 
-    removal2_interblock,
+    removal2_interblock
+]
   
+removal2_full03 = [
     fixation,  
     removal2_updating_loop_08, 
     removal2_recall, 
@@ -230,6 +234,11 @@ var cursor_on = {
     
     removal2_end
  ]
+ 
+   removal2_full = {
+   timeline: [removal2_full01, removal2_full02, removal2_full03].flat(2),
+   repetitions: 1
+ }
   
 var test_order1 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 1})}},

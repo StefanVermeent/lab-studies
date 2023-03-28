@@ -23,7 +23,7 @@ var fixation = {
   trial_duration: 500,
   data: {
     variable: 'fixation',
-    task: 'removal2'
+    task: 'removal2_notlog'
   }
 };
 
@@ -68,7 +68,7 @@ var removal2_emptyscreen = {
   },
   data: {
     variable: 'emptyscreen',
-    task: 'removal2',
+    task: 'removal2_notlog',
     stimulus: ''
   }
 }
@@ -87,7 +87,7 @@ var removal2_positioncue = {
   },
   data: {
     variable: 'cue',
-    task: 'removal2',
+    task: 'removal2_notlog',
     stimulus: ''
   }
 }
@@ -145,7 +145,7 @@ var removal2_interblock = {
   choices: "ALL_KEYS",
   data: {
     variable: 'interblock',
-    task: 'removal2'
+    task: 'removal2_notlog'
   }
 };
 
