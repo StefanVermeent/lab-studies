@@ -289,7 +289,9 @@ var jsPsych = initJsPsych({
     data_removal_abs       = jsPsych.data.get().filter({task: 'removal_abs'});
     data_removal_eco       = jsPsych.data.get().filter({task: 'removal_eco'});
     
-    data_removal2          = jsPsych.data.get().filter({task: 'removal2'});
+    data_removal2_01       = jsPsych.data.get().filter({task: 'removal2_01'});
+    data_removal2_02       = jsPsych.data.get().filter({task: 'removal2_02'});
+    data_removal2_03       = jsPsych.data.get().filter({task: 'removal2_03'});
     
     data_shifting_abs_prac = jsPsych.data.get().filter({task: 'shifting_abs_practice'});
     data_shifting_eco_prac = jsPsych.data.get().filter({task: 'shifting_eco_practice'});
@@ -299,14 +301,14 @@ var jsPsych = initJsPsych({
     data_shifting_eco2     = jsPsych.data.get().filter({task: 'shifting_eco2'});
     
     tasks_browser          = jsPsych.data.getInteractionData().json();
-    console.log(data_shifting_eco2);
-    console.log(tasks_start);
-    console.log(tasks_browser);
+
     window.parent.postMessage([
       tasks_start, 
       data_removal_abs.json(),
       data_removal_eco.json(),
-      data_removal2.json(),
+      data_removal2_01.json(),
+      data_removal2_02.json(),
+      data_removal2_03.json(),
       data_shifting_abs_prac.json(),
       data_shifting_eco_prac.json(),
       data_shifting_abs1.json(),
@@ -316,6 +318,23 @@ var jsPsych = initJsPsych({
       tasks_browser
       ], 
       "https://survey.uu.nl/jfe/form/SV_6JydopUOxA9rFtA");
+      
+      window.parent.postMessage([
+      tasks_start, 
+      data_removal_abs.json(),
+      data_removal_eco.json(),
+      data_removal2_01.json(),
+      data_removal2_02.json(),
+      data_removal2_03.json(),
+      data_shifting_abs_prac.json(),
+      data_shifting_eco_prac.json(),
+      data_shifting_abs1.json(),
+      data_shifting_abs2.json(),
+      data_shifting_eco1.json(),
+      data_shifting_eco2.json(),
+      tasks_browser
+      ], 
+      "https://survey.uu.nl/jfe/form/SV_cSZifHrTH5OOCPA");
   }
 });
 
