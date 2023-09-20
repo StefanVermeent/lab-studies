@@ -231,61 +231,28 @@ var cursor_on = {
   
 var test_order1 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 1})}},
-    timeline_start, shifting_full01, removal_full, removal2_full
+    timeline_start, shifting_full01, removal2_full
   ].flat(2)  
   
 var test_order2 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 2})}},
-    timeline_start, shifting_full02, removal_full, removal2_full
+    timeline_start, shifting_full02, removal2_full
   ].flat(2)  
   
 var test_order3 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 3})}},
-    timeline_start, removal_full, shifting_full01, removal2_full
+    timeline_start, removal2_full, shifting_full01
   ].flat(2)  
   
 var test_order4 = [
     {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 4})}},
-    timeline_start, removal_full, shifting_full02, removal2_full
+    timeline_start, removal2_full, shifting_full02
   ].flat(2)  
   
-var test_order5 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 5})}},
-    timeline_start, removal_full, removal2_full, shifting_full01
-  ].flat(2)  
-  
-var test_order6 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 6})}},
-    timeline_start, removal_full, removal2_full, shifting_full02 
-  ].flat(2)  
-  
-var test_order7 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 7})}},
-    timeline_start, removal2_full, removal_full, shifting_full01 
-  ].flat(2)  
-  
-var test_order8 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 8})}},
-    timeline_start, removal2_full, removal_full, shifting_full02
-  ].flat(2)  
-  
-  var test_order9 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 9})}},
-    timeline_start, removal2_full, shifting_full01 , removal_full 
-  ].flat(2)  
-  
-var test_order10 = [
-    {type: jsPsychCallFunction, func: function(){jsPsych.data.addProperties({counterbalance: 10})}},
-    timeline_start, removal2_full, shifting_full02 , removal_full 
-  ].flat(2)  
-
 
 var jsPsych = initJsPsych({
   on_finish: function() {
-    console.log('this gets printed')
     tasks_start            = jsPsych.getStartTime();
-    data_removal_abs       = jsPsych.data.get().filter({task: 'removal_abs'});
-    data_removal_eco       = jsPsych.data.get().filter({task: 'removal_eco'});
     
     data_removal2_01       = jsPsych.data.get().filter({task: 'removal2_01'});
     data_removal2_02       = jsPsych.data.get().filter({task: 'removal2_02'});
@@ -302,8 +269,7 @@ var jsPsych = initJsPsych({
 
     window.parent.postMessage([
       tasks_start, 
-      data_removal_abs.json(),
-      data_removal_eco.json(),
+
       data_removal2_01.json(),
       data_removal2_02.json(),
       data_removal2_03.json(),
@@ -319,8 +285,7 @@ var jsPsych = initJsPsych({
       
       window.parent.postMessage([
       tasks_start, 
-      data_removal_abs.json(),
-      data_removal_eco.json(),
+
       data_removal2_01.json(),
       data_removal2_02.json(),
       data_removal2_03.json(),
@@ -336,7 +301,7 @@ var jsPsych = initJsPsych({
   }
 });
 
-counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4, test_order5, test_order6, test_order7, test_order8, test_order9, test_order10], 1).flat(2) 
+counterbalance = jsPsych.randomization.sampleWithoutReplacement([test_order1, test_order2, test_order3, test_order4], 1).flat(2) 
 
 shifting_trial = {
    timeline: shifting_eco01,
