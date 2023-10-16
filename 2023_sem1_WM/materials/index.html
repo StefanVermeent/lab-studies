@@ -12,12 +12,6 @@
     <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-instructions@1.1.2"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@1.0.2"></script>
-
-
-    <script src="removal/0_removal_setup.js"></script>
-    <script src="removal/1_removal_instructions.js"></script>
-    <script src="removal/1_removal_abs.js"></script>
-    <script src="removal/1_removal_eco.js"></script>
     
     <script src="shifting/0_shifting_eco_setup.js"></script>
     <script src="shifting/1_shifting_abs_practice.js"></script>
@@ -62,29 +56,7 @@ var cursor_on = {
     fullscreenmode
   ]
   
-// SHUFFLE REMOVAL ORDER
- removal_eco = [
-    removal_round0_preload, removal_practice_eco_start,
-    removal_eco_round0, cursor_on, removal_eco_recall_round0, removal_eco_practice_feedback, cursor_off, 
-    removal_practice_finish,
-    removal_eco_start,
-    removal_round1_preload, removal_round1_start, removal_eco_round1, cursor_on, removal_eco_recall_round1, cursor_off,
-    removal_round2_preload, removal_round2_start, removal_eco_round2, cursor_on, removal_eco_recall_round2, cursor_off,
-    removal_round3_preload, removal_round3_start, removal_eco_round3, cursor_on, removal_eco_recall_round3, cursor_off,
-    removal_round4_preload, removal_round4_start, removal_eco_round4, cursor_on, removal_eco_recall_round4, cursor_off
- ]
- 
- removal_abs = [
-    removal_practice_abs_start, 
-    removal_abs_round0, cursor_on, removal_abs_recall_round0, removal_abs_practice_feedback, cursor_off, 
-    removal_practice_finish,
-    removal_abs_start,
-    removal_round1_start, removal_abs_round1, cursor_on, removal_abs_recall_round1, cursor_off,
-    removal_round2_start, removal_abs_round2, cursor_on, removal_abs_recall_round2, cursor_off,
-    removal_round3_start, removal_abs_round3, cursor_on, removal_abs_recall_round3, cursor_off,
-    removal_round4_start, removal_abs_round4, cursor_on, removal_abs_recall_round4, cursor_off
- ]
- 
+
  var removal_shuffle = {
    timeline: [removal_eco, removal_abs].flat(2),
    randomize_order: true,
