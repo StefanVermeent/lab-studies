@@ -13,10 +13,10 @@ var preload_flanker = {
 
 
 
-var left_f  = "<img src='I_flanker/img/female_left.png' height=150px>";
-var right_f = "<img src='I_flanker/img/female_right.png' height=150px>";
-var left_m  = "<img src='I_flanker/img/male_left.png' height=150px>";
-var right_m = "<img src='I_flanker/img/male_right.png' height=150px>";
+var left_f  = "<img src='I_flanker/img/female_left.png' style = 'height:150px; padding:5px'>";
+var right_f = "<img src='I_flanker/img/female_right.png' style = 'height:150px; padding:5px'>";
+var left_m  = "<img src='I_flanker/img/male_left.png' style = 'height:150px; padding:5px'>";
+var right_m = "<img src='I_flanker/img/male_right.png' style = 'height:150px; padding:5px'>";
 
 
 

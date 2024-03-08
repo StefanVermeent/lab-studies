@@ -20,13 +20,13 @@ var female_l = "<img src='S_shifting/img/female_left.png' style='height=200'>";
 
 var male   = "<img src='S_shifting/img/male.png' height=100 style='padding-left: 20px;'>";
 var female = "<img src='S_shifting/img/female.png' height=100 style='padding-left: 20px;'>";
-var left   = "<img src='S_shifting/img/left.png' height=100 style='padding-right: 20px;'>";
-var right  = "<img src='S_shifting/img/right.png' height=100 style='padding-right: 20px;'>";
+var left   = "<img src='S_shifting/img/left.png' height=50 style='padding-right: 20px;'>";
+var right  = "<img src='S_shifting/img/right.png' height=50 style='padding-right: 20px;'>";
 
 //-------------------- Response prompts
 
-var prompt_male  = "<div style='float:right; text-align: right;' >" + male  +  "</div>";
-var prompt_female  = "<div style='float:left;  text-align: left;'  >" + female + "</div>";
+var prompt_male  = "<div style='float:left; text-align: left;' >" + male  +  "</div>";
+var prompt_female  = "<div style='float:right;  text-align: right;'  >" + female + "</div>";
 var prompt_left = "<div style='float:left;  text-align: left;'  >" + left + "</div>";
 var prompt_right   = "<div style='float:right; text-align: right;' >" + right + "</div>";
 

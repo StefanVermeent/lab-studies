@@ -18,6 +18,7 @@
     <script src="global_variables.js"></script>
 
     <script src="S_shifting/0_shifting_setup.js"></script>
+    <script src="S_shifting/1_shifting_practice.js"></script>
     <script src="S_shifting/2_shifting_procedure.js"></script>
     <script src="S_shifting/3_shifting_end.js"></script>
 
@@ -60,11 +61,32 @@
   timeline_start = [
     fullscreenmode
   ]
-
-
+  
+shifting_timeline = [
+  preload_shifting,
+  shifting_welcome,
+  shifting_direction_instructions,
+  cursor_off,
+  shifting_direction_practice_loop,
+  cursor_on,
+  shifting_gender_instructions,
+  cursor_off,
+  shifting_gender_practice_loop,
+  cursor_on,
+  shifting_full_instructions,
+  cursor_off,
+  shifting_test_start,
+  shifting_procedure01,
+  cursor_on,
+  shifting_interblock,
+  cursor_off,
+  shifting_test_start,
+  shifting_procedure02,
+  cursor_on,
+  shifting_end
+ ]
 
 flanker_timeline = [
-  fullscreenmode,
   flanker_welcome,
   flanker_instructions,
   cursor_off,
@@ -82,6 +104,15 @@ flanker_timeline = [
 ]
 
 
+var full_timeline = [
+     shifting_timeline,
+     flanker_timeline,
+    ];
+
+
+// RANDOMIZE TASK ORDER
+
+var full_timeline_random = [timeline_start, shuffle(full_timeline)].flat(2)
 
 
 
@@ -95,6 +126,9 @@ var jsPsych = initJsPsych({
 
     data_flanker_prac      = jsPsych.data.get().filter({task: 'flanker_practice'});
     data_flanker           = jsPsych.data.get().filter({task: 'flanker'});
+    
+    data_shifting_prac      = jsPsych.data.get().filter({task: 'shifting_practice'});
+    data_shifting           = jsPsych.data.get().filter({task: 'shifting'});
 
     tasks_browser          = jsPsych.data.getInteractionData().json();
 
@@ -104,7 +138,9 @@ var jsPsych = initJsPsych({
 
       data_flanker_prac.json(),
       data_flanker.json(),
-
+      
+      data_shifting_prac.json(),
+      data_shifting.json(),
 
       tasks_browser
       ],
@@ -112,6 +148,6 @@ var jsPsych = initJsPsych({
   }
 });
 
-jsPsych.run(flanker_timeline)
+jsPsych.run(full_timeline_random)
 </script>
 </html>
