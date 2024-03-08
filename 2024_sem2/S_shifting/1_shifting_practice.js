@@ -22,13 +22,13 @@ var shifting_direction_instructions = {
           "<p style = 'text-align: center;'>We gaan een spel spelen waarin je wisselt tussen geslacht en richting.<br><br></p>",
         "<p style = 'text-align: center;'> We zullen eerst het RICHTING-spel spelen.<br><br>" +
         "In het RICHTING-spel kies je de pijl die dezelfde RICHTING opwijst als de persoon in het midden van het scherm.<br><br></p>",
-        "Als de persoon naar LINKS kijkt, druk dan op de 'A'-toets op uw toetsenbord:<br><br><br>Voorbeeld:"+
+        "Als de persoon naar LINKS kijkt, druk dan op de 'A'-toets op je toetsenbord:<br><br><br>Voorbeeld:"+
         "<div style = 'text-align: center;'>" + female_l + "</div>" +
         "<br><br><br><div>" + prompt_left + prompt_right + "</div><br><br><br>",
-        "Als de persoon naar RECHTS kijkt, druk dan op de 'L'-toets op uw toetsenbord:<br><br><br>Voorbeeld:"+
+        "Als de persoon naar RECHTS kijkt, druk dan op de 'L'-toets op je toetsenbord:<br><br><br>Voorbeeld:"+
         "<div style = 'text-align: center;'>" + male_r + "</div>" +
         "<br><br><br><div>" + prompt_left + prompt_right + "</div><br><br><br>",
-        "<p style = 'text-align: center;'> U gaat nu het RICHTING-spel oefenen.<br><br>" +
+        "<p style = 'text-align: center;'> Je gaat nu het RICHTING-spel oefenen.<br><br>" +
         "Antwoord zo snel als je kan zonder fouten te maken. Af en toe een fout maken is niet erg. Ga in dat geval gewoon door.<br><br>" +
         "Klik op 'verder' om het RICHTING-spel te oefenen.</p>"
     ],
