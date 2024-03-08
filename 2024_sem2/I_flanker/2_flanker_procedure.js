@@ -56,7 +56,7 @@ var flanker_test_procedure01 = {
 
 var flanker_interblock = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "Goed gedaan! U bent nu halverwege.<br>Neem even pauze als u dat nodig heeft en druk op 'verder' als u klaar bent voor de rest van het spel.<br><br>",
+  stimulus: "Goed gedaan! Je bent nu halverwege.<br>Neem even pauze als je dat nodig heeft en druk op 'verder' als je klaar bent voor de rest van het spel.<br><br>",
   choices: ['verder'],
   data: {
     task: 'flanker',
@@ -67,8 +67,8 @@ var flanker_interblock = {
 var flanker_test_start = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<p style = 'text-align: center;'>" +
-      "Plaats uw vingers op de 'A'-toets en 'L'-toets op uw toetsenbord.<br><br><br>" +
-      "Druk op een willekeurige toets als u klaar ben om door te gaan.",
+      "Plaats je vingers op de 'A'-toets en 'L'-toets op je toetsenbord.<br><br><br>" +
+      "Druk op een willekeurige toets als je klaar ben om door te gaan.",
   choices: "ALL_KEYS",
   data: {
     variable: 'test_start', task: 'flanker'
