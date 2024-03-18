@@ -59,7 +59,7 @@ var flanker_practice_start = {
   stimulus:    "<p style = 'text-align: center;'>" +
       "Je gaat het spel nu <strong>8 keer</strong> oefenen.<br><br>" +
       "Plaats je vingers op de 'A'- en 'L'-toets op je toetsenbord.<br><br>" +
-      "Druk op een willekeurige knop als je klaar bent om te oefenen.",
+      "Druk op een willekeurige toets als je klaar bent om te oefenen.",
   choices: "ALL_KEYS",
   data: {variable: "practice_start", task: "flanker_practice"}
 };
@@ -116,7 +116,7 @@ var flanker_practice_finish = {
   "Goed gedaan!<br><br>" +
   "Je gaat nu het echte spel spelen.<br><br>" +
   "Het spel duurt ongeveer twee minuten. Vanaf nu krijg je geen feedback meer.<br><br>" +
-  "Druk op een willekeurige knop om te beginnen! <br><br>",
+  "Druk op een willekeurige toets om te beginnen! <br><br>",
   choices: "ALL_KEYS",
   data: {variable: "practice_finish", task: "flanker_practice"}
 };

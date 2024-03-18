@@ -6,7 +6,7 @@
 var shifting_welcome = {
   type: jsPsychInstructions,
   pages: [
-    "Welkom bij het <b>Wissel</b> spel!<br><br><br><br>"
+    "Welkom bij het <b>Wissel-spel</b>!<br><br><br><br>"
   ],
   show_clickable_nav: true,
   allow_backward: true,
@@ -46,7 +46,7 @@ var shifting_direction_instructions = {
 var shifting_direction_practice_start = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<p style = 'text-align: center;'>" +
-      "Je gaat het RICHTING-spel nu 4 keer oefenen.<br>" +
+      "Je gaat het RICHTING-spel nu 6 keer oefenen.<br>" +
       "Plaats je vingers op de 'A'-toets en 'L'-toets op je toetsenbord.<br><br><br>" +
       "Druk op een willekeurige toets als je klaar bent om te oefenen.",
   choices: "ALL_KEYS",
@@ -112,11 +112,11 @@ var shifting_direction_practice_loop = {
 var shifting_gender_instructions = {
     type: jsPsychInstructions,
     pages: [
-         "<p style = 'text-align: center;'>We kunnen ook vergelijken op GESLACHT. <br><br>In het GESLACHT-spel kies je het plaatje dat hetzelfde GESLACHT heeft als de persoon in het midden van het scherm.<br><br></p>",
-        "als de persoon een MAN is, druk dan op de 'A'-toets op uw toetsenbord:<br><br><br>Voorbeeld:"+
+         "<p style = 'text-align: center;'>We kunnen ook vergelijken op GESLACHT. <br><br>In het GESLACHT-spel druk je op de toets die hoort bij het GESLACHT van de persoon in het midden van het scherm.<br><br></p>",
+        "als de persoon een MAN is, druk dan op de 'A'-toets op je toetsenbord:<br><br><br>Voorbeeld:"+
         "<div style = 'text-align: center;'>" + male_l + "</div>" +
         "<br><br><br><div>" + prompt_male + prompt_female + "</div><br><br><br>",
-        "Als de persoon een VROUW is, druk dan op de 'L'-toets op uw toetsenbord:<br><br><br>Voorbeeld:"+
+        "Als de persoon een VROUW is, druk dan op de 'L'-toets op je toetsenbord:<br><br><br>Voorbeeld:"+
         "<div style = 'text-align: center;'>" + female_r + "</div>" +
         "<br><br><br><div>" + prompt_male + prompt_female + "</div><br><br><br>",
         "<p style = 'text-align: center;'>U gaat nu het GESLACHT-spel oefenen.<br><br>" +
@@ -202,9 +202,9 @@ var shifting_gender_practice_loop = {
 var shifting_full_instructions = {
     type: jsPsychInstructions,
     pages: ["<div style = 'text-align: center;'>Goed gedaan!<br><br>" +
-            "Nu gaan we beide spellen tegelijk spelen.<br><ul>" +
-            "<li>Als je het woord RICHTING ziet, kies dan het plaatje dat dezelfde RICHTING opkijkt als de persoon in het midden.</li>" +
-            "<li>Als je het woord GESLACHT ziet, kies dan het plaatje dat hetzelfde GESLACHT heeft als de persoon in het midden.</li>" +
+            "Nu ga je beide spellen tegelijk spelen.<br><ul>" +
+            "<li>Als je het woord RICHTING ziet, druk dan op de knop die hoort bij de RICHTING waarin de persoon kijkt.</li>" +
+            "<li>Als je het woord GESLACHT ziet, druk dan op de knop die hoort bij het GESLACHT van de persoon.</li>" +
             "</ul><p>Je ziet steeds de volgende plaatjes ter herinnering:</p></div><br><br>" +
             "<div style='width: 60%; padding-left:20%; padding-right:20%;'>" +
             "<div>" + prompt_male + prompt_left + prompt_right + prompt_female + "</div><br><br><br><br>" +
@@ -223,7 +223,7 @@ var shifting_test_start = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<p style = 'text-align: center;'>" +
       "Vanaf nu krijg je geen feedback meer.<br><br>" +
-      "Plaats je vingers op de 'A'-toets en 'L'-toets op uw toetsenbord.<br><br><br>" +
+      "Plaats je vingers op de 'A'-toets en 'L'-toets op je toetsenbord.<br><br><br>" +
       "Druk op een willekeurige toets als je klaar bent om te starten.",
   choices: "ALL_KEYS",
   data: {
