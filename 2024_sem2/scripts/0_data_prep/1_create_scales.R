@@ -6,13 +6,13 @@ library(here)
 library(sjlabelled)
 
 # Functions ---------------------------------------------------------------
-source(here("2023_sem1_WM", "scripts", "custom_functions", "create_codebook.R"))
-source(here("2023_sem1_WM", "scripts", "custom_functions", "functions_exclusions.R"))
+source(here("2024_sem2", "scripts", "custom_functions", "create_codebook.R"))
+source(here("2024_sem2", "scripts", "custom_functions", "functions_exclusions.R"))
 
 # Data --------------------------------------------------------------------
 study_data_online <- 
   fetch_survey(
-    surveyID = "SV_cSZifHrTH5OOCPA", 
+    surveyID = "SV_a4SePQfBV8LT3lY", 
     verbose  = T,
     force_request = T,
     label = F,
@@ -26,25 +26,6 @@ study_data_online <-
   ) %>%
   filter(finished==1) |> 
   filter(`duration (in seconds)` > 0) 
-
-study_data_lab <- 
-  fetch_survey(
-    surveyID = "SV_6JydopUOxA9rFtA", 
-    verbose  = T,
-    force_request = T,
-    label = F,
-    convert = F,
-    add_var_labels = F
-  ) %>% 
-  rename_with(tolower) %>% 
-  mutate(id = paste0("L_", 1:n())) %>% 
-  sjlabelled::var_labels(
-    id = "Blinded participant ID"
-  ) %>%
-  filter(finished==1) |> 
-  filter(`duration (in seconds)` > 0)
-
-study_data <- bind_rows(study_data_online |> mutate(id = as.character(id)), study_data_lab |> mutate(id = as.character(id)))
 
 # Self-report -------------------------------------------------------------
 

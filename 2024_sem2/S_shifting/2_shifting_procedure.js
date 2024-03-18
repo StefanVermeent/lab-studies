@@ -10,7 +10,7 @@ var shifting_test = {
   stimulus: function(){
     var stim = ""
     if(jsPsych.timelineVariable('data')['rule'] == "gender") {
-      stim += "<div style = 'text-align: center;'><h1>GENDER<br></h1><br><br><br><div style = 'font-size:60px'>" + jsPsych.timelineVariable('stimulus') + "</div></div>";
+      stim += "<div style = 'text-align: center;'><h1>GESLACHT<br></h1><br><br><br><div style = 'font-size:60px'>" + jsPsych.timelineVariable('stimulus') + "</div></div>";
     }
     if(jsPsych.timelineVariable('data')['rule'] == "direction") {
       stim += "<div style = 'text-align: center;'><h1>RICHTING<br></h1><br><br><br><div style = 'font-size:60px'>" + jsPsych.timelineVariable('stimulus') + "</div></div>";

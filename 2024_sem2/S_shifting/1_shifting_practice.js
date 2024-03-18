@@ -120,7 +120,7 @@ var shifting_gender_instructions = {
         "<div style = 'text-align: center;'>" + female_r + "</div>" +
         "<br><br><br><div>" + prompt_male + prompt_female + "</div><br><br><br>",
         "<p style = 'text-align: center;'>U gaat nu het GESLACHT-spel oefenen.<br><br>" +
-        "Antwoord zo snel al je kan zonder fouten te maken. Af en toe een fout maken is niet erg. Ga in dat geval gewoon door.<br><br>" +
+        "Antwoord zo snel als je kan zonder fouten te maken. Af en toe een fout maken is niet erg. Ga in dat geval gewoon door.<br><br>" +
         "Klik op 'verder' om het GESLACHT-spel te oefenen.</p>"
     ],
     show_clickable_nav: true,
@@ -138,7 +138,7 @@ var shifting_gender_practice_start = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<p style = 'text-align: center;'>" +
       "Je gaat het GESLACHT-spel nu 6 keer oefenen.<br>" +
-      "Plaats je vingers op de 'A'-toets (KLEINER) en 'L'-toets (GROTER) op je toetsenbord.<br><br><br>" +
+      "Plaats je vingers op de 'A'-toets (MAN) en 'L'-toets (VROUW) op je toetsenbord.<br><br><br>" +
       "Druk op een willekeurige toets als je klaar bent om te oefenen.",
   choices: "ALL_KEYS",
   data: {
