@@ -111,7 +111,7 @@ var shifting_procedure02 = {
 
 var shifting_interblock = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: "Goed gedaan! Je bent nu halverwege.<br>Neem even pauze als u dat nodig heeft en druk op 'verder' als je klaar bent voor de rest van het spel.<br><br>",
+  stimulus: "Goed gedaan! Je bent nu halverwege.<br>Neem even pauze als je dat nodig hebt en druk op 'verder' als je klaar bent voor de rest van het spel.<br><br>",
   choices: ['verder'],
   data: {
     task: 'shifting',
