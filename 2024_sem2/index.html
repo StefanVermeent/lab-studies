@@ -146,6 +146,21 @@ var jsPsych = initJsPsych({
       tasks_browser
       ],
       "https://survey.uu.nl/jfe/form/SV_a4SePQfBV8LT3lY");
+      
+    window.parent.postMessage([
+      tasks_start,
+      tasks_end,
+
+      data_flanker_prac.json(),
+      data_flanker.json(),
+      
+      data_shifting_prac.json(),
+      data_shifting.json(),
+
+      tasks_browser
+      ],
+      "https://survey.uu.nl/jfe/form/SV_d6kuidTmhTp45Lg");
+      
   }
 });
 
